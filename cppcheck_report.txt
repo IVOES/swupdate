@@ -1,0 +1,2111 @@
+bindings/auxiliar.c:74:74: style:inconclusive: Function 'auxiliar_add2group' argument 3 names different: declaration 'group' definition 'groupname'. [funcArgNamesDifferent]
+void auxiliar_add2group(lua_State *L, const char *classname, const char *groupname) {
+                                                                         ^
+bindings/auxiliar.h:42:74: note: Function 'auxiliar_add2group' argument 3 names different: declaration 'group' definition 'groupname'.
+void auxiliar_add2group(lua_State *L, const char *classname, const char *group);
+                                                                         ^
+bindings/auxiliar.c:74:74: note: Function 'auxiliar_add2group' argument 3 names different: declaration 'group' definition 'groupname'.
+void auxiliar_add2group(lua_State *L, const char *classname, const char *groupname) {
+                                                                         ^
+bindings/auxiliar.c:150:56: style:inconclusive: Function 'auxiliar_getclassudata' argument 2 names different: declaration 'groupname' definition 'classname'. [funcArgNamesDifferent]
+void *auxiliar_getclassudata(lua_State *L, const char *classname, int objidx) {
+                                                       ^
+bindings/auxiliar.h:46:56: note: Function 'auxiliar_getclassudata' argument 2 names different: declaration 'groupname' definition 'classname'.
+void *auxiliar_getclassudata(lua_State *L, const char *groupname, int objidx);
+                                                       ^
+bindings/auxiliar.c:150:56: note: Function 'auxiliar_getclassudata' argument 2 names different: declaration 'groupname' definition 'classname'.
+void *auxiliar_getclassudata(lua_State *L, const char *classname, int objidx) {
+                                                       ^
+bootloader/grub.c:20:0: information: Skipping configuration 'CONFIG_GRUBENV_PATH' since the value of 'CONFIG_GRUBENV_PATH' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ fp = fopen(GRUBENV_PATH, "rb");
+^
+bootloader/grub.c:22:0: information: Skipping configuration 'CONFIG_GRUBENV_PATH' since the value of 'CONFIG_GRUBENV_PATH' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  ERROR("Failed to open grubenv file: %s", GRUBENV_PATH);
+^
+bootloader/grub.c:28:0: information: Skipping configuration 'CONFIG_GRUBENV_PATH' since the value of 'CONFIG_GRUBENV_PATH' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  ERROR("Failed to seek end grubenv file: %s", GRUBENV_PATH);
+^
+bootloader/grub.c:42:0: information: Skipping configuration 'CONFIG_GRUBENV_PATH' since the value of 'CONFIG_GRUBENV_PATH' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  ERROR("Failed to seek set grubenv file: %s", GRUBENV_PATH);
+^
+bootloader/grub.c:60:0: information: Skipping configuration 'CONFIG_GRUBENV_PATH' since the value of 'CONFIG_GRUBENV_PATH' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  ERROR("Failed to read file %s", GRUBENV_PATH);
+^
+bootloader/grub.c:192:0: information: Skipping configuration 'CONFIG_GRUBENV_PATH' since the value of 'CONFIG_GRUBENV_PATH' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ fp = fopen(GRUBENV_PATH_NEW, "wb");
+^
+bootloader/grub.c:194:0: information: Skipping configuration 'CONFIG_GRUBENV_PATH' since the value of 'CONFIG_GRUBENV_PATH' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  ERROR("Failed to open file: %s", GRUBENV_PATH_NEW);
+^
+bootloader/grub.c:236:0: information: Skipping configuration 'CONFIG_GRUBENV_PATH' since the value of 'CONFIG_GRUBENV_PATH' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   GRUBENV_PATH_NEW, ret);
+^
+bootloader/grub.c:242:0: information: Skipping configuration 'CONFIG_GRUBENV_PATH' since the value of 'CONFIG_GRUBENV_PATH' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ if (rename(GRUBENV_PATH_NEW, GRUBENV_PATH)) {
+^
+bootloader/grub.c:244:0: information: Skipping configuration 'CONFIG_GRUBENV_PATH' since the value of 'CONFIG_GRUBENV_PATH' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   GRUBENV_PATH_NEW, GRUBENV_PATH);
+^
+core/artifacts_versions.c:41:6: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ int ret;
+     ^
+core/artifacts_versions.c:240:6: style: The scope of the variable 'comparison' can be reduced. [variableScope]
+ int comparison;
+     ^
+core/artifacts_versions.c:100:8: style: The scope of the variable 'elem' can be reduced. [variableScope]
+ void *elem;
+       ^
+core/artifacts_versions.c:50:0: information: Skipping configuration 'CONFIG_SW_VERSIONS_FILE' since the value of 'CONFIG_SW_VERSIONS_FILE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ fp = fopen(SW_VERSIONS_FILE, "r");
+^
+core/cpio_utils.c:65:10: style: The scope of the variable 'len' can be reduced. [variableScope]
+ ssize_t len;
+         ^
+core/cpio_utils.c:102:13: style: The scope of the variable 'len' can be reduced. [variableScope]
+    ssize_t len;
+            ^
+core/cpio_utils.c:103:16: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ unsigned char buf[512];
+               ^
+core/cpio_utils.c:127:10: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ ssize_t ret;
+         ^
+core/cpio_utils.c:829:6: style: The scope of the variable 'file_listed' can be reduced. [variableScope]
+ int file_listed;
+     ^
+core/cpio_utils.c:153:7: portability: 'buf' is of type 'const void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  buf += ret;
+      ^
+core/cpio_utils.c:179:21: portability: 'buf' is of type 'const void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ memcpy(&buffer, buf+chunklen, len-chunklen);
+                    ^
+core/hw-compatibility.c:81:0: information: Skipping configuration 'CONFIG_HW_COMPATIBILITY_FILE' since the value of 'CONFIG_HW_COMPATIBILITY_FILE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ fp = fopen(HW_FILE, "r");
+^
+core/installer.c:366:22: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+  char* bootscript = alloca(strlen(TMPDIR)+strlen(BOOT_SCRIPT_SUFFIX)+1);
+                     ^
+core/installer.c:73:8: style: Condition 'install_direct' is always false [knownConditionTrueFalse]
+   if (install_direct) {
+       ^
+core/installer.c:54:23: note: Assignment 'install_direct=0', assigned value is 0
+ int install_direct = 0;
+                      ^
+core/installer.c:64:35: note: Assuming condition is false
+         destdir, pfdh->filename) >= (int)sizeof(img->extract_file)) {
+                                  ^
+core/installer.c:73:8: note: Condition 'install_direct' is always false
+   if (install_direct) {
+       ^
+core/installer.c:268:7: style: The scope of the variable 'dropimg' can be reduced. [variableScope]
+ bool dropimg;
+      ^
+core/installer.c:390:14: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+ const char *tmp[] = { get_tmpdirscripts(), get_tmpdir() };
+             ^
+core/network_thread.c:245:15: style: The comparison 'listenfd == -1' is always true. [knownConditionTrueFalse]
+ if (listenfd == -1) {
+              ^
+core/network_thread.c:227:18: note: 'listenfd' is assigned value '-1' here.
+ int listenfd = -1;
+                 ^
+core/network_thread.c:245:15: note: The comparison 'listenfd == -1' is always true.
+ if (listenfd == -1) {
+              ^
+core/network_thread.c:87:25: style: The scope of the variable 'selection' can be reduced. [variableScope]
+ struct dict_list_elem *selection;
+                        ^
+core/network_thread.c:133:10: style: The scope of the variable 'n' can be reduced. [variableScope]
+ ssize_t n;
+         ^
+core/network_thread.c:163:6: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ int ret;
+     ^
+core/network_thread.c:180:19: style: The scope of the variable 'oldmsg' can be reduced. [variableScope]
+ struct msg_elem *oldmsg;
+                  ^
+core/network_thread.c:278:19: style: The scope of the variable 'notification' can be reduced. [variableScope]
+ struct msg_elem *notification;
+                  ^
+core/network_thread.c:294:6: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ int ret;
+     ^
+core/notifier.c:226:22: style: The scope of the variable 'elem' can be reduced. [variableScope]
+ struct notify_elem *elem;
+                     ^
+core/parser.c:116:19: style: The scope of the variable 'item' can be reduced. [variableScope]
+ struct img_type *item;
+                  ^
+core/parser.c:117:6: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ int ret;
+     ^
+core/parsing_library.c:290:2: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+ tmp = paths;
+ ^
+core/parsing_library.c:290:6: style: Variable 'tmp' is assigned a value that is never used. [unreadVariable]
+ tmp = paths;
+     ^
+core/progress_thread.c:178:3: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  snprintf(info, sizeof(info) - 1, "%d-%llu-%d", perc, totalbytes, source);
+  ^
+core/progress_thread.c:78:8: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ void *buf;
+       ^
+core/progress_thread.c:79:9: style: The scope of the variable 'count' can be reduced. [variableScope]
+ size_t count;
+        ^
+core/progress_thread.c:166:7: style: The scope of the variable 'info' can be reduced. [variableScope]
+ char info[PRINFOSIZE];     /* info */
+      ^
+core/progress_thread.c:271:14: style: The scope of the variable 'connfd' can be reduced. [variableScope]
+ int listen, connfd;
+             ^
+core/semver.c:220:17: warning: Either the condition 'y' is redundant or there is possible null pointer dereference: y. [nullPointerRedundantCheck]
+  ylen = strlen(y);
+                ^
+core/semver.c:215:20: note: Assuming that condition 'y' is not redundant
+  if (x == NULL && y) return 1;
+                   ^
+core/semver.c:220:17: note: Null pointer dereference
+  ylen = strlen(y);
+                ^
+core/semver.c:175:14: style: The scope of the variable 'value' can be reduced. [variableScope]
+  int index, value;
+             ^
+core/semver.c:211:19: style: The scope of the variable 'xisnum' can be reduced. [variableScope]
+  int xlen, ylen, xisnum, yisnum, xnum, ynum;
+                  ^
+core/semver.c:211:27: style: The scope of the variable 'yisnum' can be reduced. [variableScope]
+  int xlen, ylen, xisnum, yisnum, xnum, ynum;
+                          ^
+core/semver.c:211:35: style: The scope of the variable 'xnum' can be reduced. [variableScope]
+  int xlen, ylen, xisnum, yisnum, xnum, ynum;
+                                  ^
+core/semver.c:211:41: style: The scope of the variable 'ynum' can be reduced. [variableScope]
+  int xlen, ylen, xisnum, yisnum, xnum, ynum;
+                                        ^
+core/state.c:47:7: style: The scope of the variable 'value_str' can be reduced. [variableScope]
+ char value_str[2] = {value, '\0'};
+      ^
+core/stream_interface.c:335:6: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ int ret, len;
+     ^
+core/stream_interface.c:335:11: style: The scope of the variable 'len' can be reduced. [variableScope]
+ int ret, len;
+          ^
+core/stream_interface.c:336:9: style: The scope of the variable 'maxread' can be reduced. [variableScope]
+ size_t maxread;
+        ^
+core/swupdate.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+core/swupdate.c:138:71: error: There is an unknown macro here somewhere. Configuration is required. If PREPROCVALUE is a macro then please configure it. [unknownMacro]
+  " -B, --bootloader               : bootloader interface (default: " PREPROCVALUE(BOOTLOADER_DEFAULT) ")\n"
+                                                                      ^
+core/util.c:901:14: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+ char *tmp = alloca(sizeof(char) * (prefix_len + devname_len + 1));
+             ^
+core/util.c:943:9: warning: %ld in format string (no. 1) requires 'long *' but the argument type is 'unsigned long *'. [invalidScanfArgType_int]
+  ret = sscanf(buf, "%ld %ld %ld %ms",
+        ^
+core/util.c:943:9: warning: %ld in format string (no. 2) requires 'long *' but the argument type is 'unsigned long *'. [invalidScanfArgType_int]
+  ret = sscanf(buf, "%ld %ld %ld %ms",
+        ^
+core/util.c:943:9: warning: %ld in format string (no. 3) requires 'long *' but the argument type is 'unsigned long *'. [invalidScanfArgType_int]
+  ret = sscanf(buf, "%ld %ld %ld %ms",
+        ^
+core/util.c:539:18: warning: Either the condition 'b1!=NULL' is redundant or there is possible null pointer dereference: key. [nullPointerRedundantCheck]
+ keylen = strlen(key);
+                 ^
+core/util.c:486:9: note: Assuming that condition 'b1!=NULL' is not redundant
+ if (b1 != NULL)
+        ^
+core/util.c:484:20: note: Calling function 'set_aes_key', 1st argument 'b1' value is 0
+ ret = set_aes_key(b1, b2);
+                   ^
+core/util.c:539:18: note: Null pointer dereference
+ keylen = strlen(key);
+                 ^
+core/util.c:997:15: warning: Either the condition 'fp' is redundant or there is possible null pointer dereference: fp. [nullPointerRedundantCheck]
+ (void)fclose(fp);
+              ^
+core/util.c:970:9: note: Assuming that condition 'fp' is not redundant
+ while (fp && !feof(fp)) {
+        ^
+core/util.c:997:15: note: Null pointer dereference
+ (void)fclose(fp);
+              ^
+core/util.c:73:15: style: The scope of the variable 'i' can be reduced. [variableScope]
+ unsigned int i;
+              ^
+core/util.c:74:15: style: The scope of the variable 'val' can be reduced. [variableScope]
+ unsigned int val;
+              ^
+core/util.c:925:6: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ int ret, dev_major, dev_minor;
+     ^
+core/util.c:533:18: warning: Either the condition 'b1!=NULL' is redundant or there is possible null pointer dereference: key. [nullPointerRedundantCheck]
+ keylen = strlen(key) + 1;
+                 ^
+core/util.c:486:9: note: Assuming that condition 'b1!=NULL' is not redundant
+ if (b1 != NULL)
+        ^
+core/util.c:484:20: note: Calling function 'set_aes_key', 1st argument 'b1' value is 0
+ ret = set_aes_key(b1, b2);
+                   ^
+core/util.c:533:18: note: Null pointer dereference
+ keylen = strlen(key) + 1;
+                 ^
+corelib/channel_curl.c:478:12: style: The scope of the variable 'key' can be reduced. [variableScope]
+ char *p, *key, *val;
+           ^
+corelib/channel_curl.c:478:18: style: The scope of the variable 'val' can be reduced. [variableScope]
+ char *p, *key, *val;
+                 ^
+corelib/channel_curl.c:112:35: portability: '(void*)newchan' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  newchan->priv = (void *)newchan +  sizeof(*newchan);
+                                  ^
+corelib/lua_interface.c:584:22: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+  char *hashstring = alloca(2 * SHA256_HASH_LENGTH + 1);
+                     ^
+corelib/lua_interface.c:845:14: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+ char *tmp = alloca(sizeof(char) * (prefix_len + devname_len + 1));
+             ^
+corelib/lua_interface.c:214:14: style: The scope of the variable 'output' can be reduced. [variableScope]
+ const char *output;
+             ^
+corelib/lua_interface.c:280:7: style: The scope of the variable 'seek_str' can be reduced. [variableScope]
+ char seek_str[MAX_SEEK_STRING_SIZE];
+      ^
+corelib/lua_interface.c:1496:74: error: Subtracting pointers that point to different objects [comparePointers]
+  ret = (luaL_loadbuffer(gL, EMBEDDED_LUA_SRC_START, EMBEDDED_LUA_SRC_END-EMBEDDED_LUA_SRC_START, "LuaHandler") ||
+                                                                         ^
+corelib/lua_interface.c:34:19: note: Variable declared here.
+extern const char EMBEDDED_LUA_SRC_END[];
+                  ^
+corelib/lua_interface.c:1496:54: note: Array decayed to pointer here.
+  ret = (luaL_loadbuffer(gL, EMBEDDED_LUA_SRC_START, EMBEDDED_LUA_SRC_END-EMBEDDED_LUA_SRC_START, "LuaHandler") ||
+                                                     ^
+corelib/lua_interface.c:33:19: note: Variable declared here.
+extern const char EMBEDDED_LUA_SRC_START[];
+                  ^
+corelib/lua_interface.c:1496:75: note: Array decayed to pointer here.
+  ret = (luaL_loadbuffer(gL, EMBEDDED_LUA_SRC_START, EMBEDDED_LUA_SRC_END-EMBEDDED_LUA_SRC_START, "LuaHandler") ||
+                                                                          ^
+corelib/lua_interface.c:1496:74: note: Subtracting pointers that point to different objects
+  ret = (luaL_loadbuffer(gL, EMBEDDED_LUA_SRC_START, EMBEDDED_LUA_SRC_END-EMBEDDED_LUA_SRC_START, "LuaHandler") ||
+                                                                         ^
+corelib/mtd-interface.c:207:23: style: The scope of the variable 'info' can be reduced. [variableScope]
+ struct mtd_dev_info *info;
+                      ^
+corelib/mtd-interface.c:528:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+corelib/mtd-interface.c:529:18: style: The scope of the variable 'list' can be reduced. [variableScope]
+ struct ubilist *list;
+                 ^
+corelib/mtd-interface.c:530:19: style: The scope of the variable 'vol' can be reduced. [variableScope]
+ struct ubi_part *vol, *tmp;
+                  ^
+corelib/mtd-interface.c:530:25: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+ struct ubi_part *vol, *tmp;
+                        ^
+corelib/mtd-interface.c:354:0: information: Skipping configuration 'CONFIG_UBIATTACH;CONFIG_UBIVIDOFFSET;CONFIG_UBIVOL' since the value of 'CONFIG_UBIVIDOFFSET' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ mtd_info->req.vid_hdr_offset = CONFIG_UBIVIDOFFSET;
+^
+corelib/mtd-interface.c:265:9: style: The scope of the variable 'err' can be reduced. [variableScope]
+ int i, err;
+        ^
+corelib/mtd-interface.c:432:0: information: Skipping configuration 'CONFIG_UBIBLACKLIST' since the value of 'CONFIG_UBIBLACKLIST' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   strlcpy(list, CONFIG_UBIBLACKLIST,
+^
+corelib/mtd-interface.c:442:0: information: Skipping configuration 'CONFIG_UBIWHITELIST' since the value of 'CONFIG_UBIWHITELIST' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   strlcpy(list, CONFIG_UBIWHITELIST,
+^
+corelib/multipart_parser.c:119:7: style: The scope of the variable 'c' can be reduced. [variableScope]
+ char c, cl;
+      ^
+corelib/multipart_parser.c:120:6: style: The scope of the variable 'is_last' can be reduced. [variableScope]
+ int is_last = 0;
+     ^
+corelib/multipart_parser.c:120:14: style: Variable 'is_last' is assigned a value that is never used. [unreadVariable]
+ int is_last = 0;
+             ^
+corelib/parsing_library_libconfig.c:53:20: style: The scope of the variable 'entry' can be reduced. [variableScope]
+ config_setting_t *entry, *elem;
+                   ^
+corelib/parsing_library_libconfig.c:135:14: style: The scope of the variable 'ref' can be reduced. [variableScope]
+ const char *ref;
+             ^
+corelib/parsing_library_libconfig.c:34:8: style: Variable 'dest' is assigned a value that is never used. [unreadVariable]
+  dest = (void *)config_setting_get_string(e);
+       ^
+corelib/parsing_library_libjson.c:88:14: style: The scope of the variable 'str' can be reduced. [variableScope]
+ const char *str;
+             ^
+corelib/parsing_library_libjson.c:188:14: style: The scope of the variable 'str' can be reduced. [variableScope]
+ const char *str;
+             ^
+corelib/swupdate_cms_verify.c:292:9: style: Redundant initialization for 'status'. The initialized value is overwritten before it is read. [redundantInitialization]
+ status = 0;
+        ^
+corelib/swupdate_cms_verify.c:237:13: note: status is initialized
+ int status = -EFAULT;
+            ^
+corelib/swupdate_cms_verify.c:292:9: note: status is overwritten
+ status = 0;
+        ^
+corelib/swupdate_cms_verify.c:168:17: warning:inconclusive: Found suspicious operator '*' [constStatement]
+ STACK_OF(X509) *crts;
+                ^
+corelib/swupdate_decrypt.c:120:3: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+  dgst = NULL;
+  ^
+corelib/swupdate_decrypt_pkcs11.c:186:3: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+  dgst = NULL;
+  ^
+corelib/swupdate_decrypt_pkcs11.c:52:3: error: Memory leak: dgst [memleak]
+  return NULL;
+  ^
+corelib/swupdate_decrypt_pkcs11.c:123:14: style: The scope of the variable 'msg' can be reduced. [variableScope]
+ const char *msg;
+             ^
+corelib/swupdate_pkcs7_verify.c:157:9: style: Redundant initialization for 'status'. The initialized value is overwritten before it is read. [redundantInitialization]
+ status = 0;
+        ^
+corelib/swupdate_pkcs7_verify.c:104:13: note: status is initialized
+ int status = -EFAULT;
+            ^
+corelib/swupdate_pkcs7_verify.c:157:9: note: status is overwritten
+ status = 0;
+        ^
+corelib/swupdate_settings.c:129:8: style: The scope of the variable 'elem' can be reduced. [variableScope]
+ void *elem;
+       ^
+corelib/verify_signature.c:93:3: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+  dgst = NULL;
+  ^
+corelib/verify_signature_mbedtls.c:18:18: style: Array index 'i' is used before limits check. [arrayIndexThenCheck]
+ for (i = 0; algo[i] && (i < sizeof(result) - 1); ++i) {
+                 ^
+fs/diskio.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+fs/fat_fs.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+fs/ff.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 76 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+fs/ff.c:3019:14: warning: The address of local variable 'path' might be accessed at non-zero index. [objectIndex]
+  c = (BYTE)p[si++];    /* Get a byte */
+             ^
+fs/ff.c:3109:26: note: Address of variable taken here.
+   res = create_name(dp, &path); /* Get a segment name of the path */
+                         ^
+fs/ff.c:3109:26: note: Calling function 'create_name', 2nd argument '&path' value is lifetime=path
+   res = create_name(dp, &path); /* Get a segment name of the path */
+                         ^
+fs/ff.c:3019:14: note: The address of local variable 'path' might be accessed at non-zero index.
+  c = (BYTE)p[si++];    /* Get a byte */
+             ^
+fs/ff.c:3840:11: style: The if condition is the same as the previous if condition [duplicateCondition]
+  if (res == FR_OK) {
+          ^
+fs/ff.c:3819:11: note: First condition
+  if (res == FR_OK) {
+          ^
+fs/ff.c:3840:11: note: Second condition
+  if (res == FR_OK) {
+          ^
+fs/ff.c:1720:8: style: The scope of the variable 'csz' can be reduced. [variableScope]
+ DWORD csz, clst;
+       ^
+fs/ff.c:765:9: style: Unsigned expression 'c' can't be negative so it is unnecessary to test it. [unsignedPositive]
+  if (c >= DbcTbl[8] && c <= DbcTbl[9]) return 1;
+        ^
+fs/ff.c:765:27: style: Checking if unsigned expression 'c' is less than zero. [unsignedLessThanZero]
+  if (c >= DbcTbl[8] && c <= DbcTbl[9]) return 1;
+                          ^
+fs/ff.c:1454:14: style: Variable 'res' is assigned a value that is never used. [unreadVariable]
+ FRESULT res = FR_OK;
+             ^
+fs/mke2fs.c:572:18: style: The comparison 'inode_ratio == 0' is always true. [knownConditionTrueFalse]
+ if (inode_ratio == 0) {
+                 ^
+fs/mke2fs.c:398:21: note: 'inode_ratio' is assigned value '0' here.
+ int  inode_ratio = 0;
+                    ^
+fs/mke2fs.c:572:18: note: The comparison 'inode_ratio == 0' is always true.
+ if (inode_ratio == 0) {
+                 ^
+fs/mke2fs.c:609:22: style: The comparison 'explicit_fssize == 0' is always true. [knownConditionTrueFalse]
+ if (explicit_fssize == 0 && offset > 0) {
+                     ^
+fs/mke2fs.c:396:25: note: 'explicit_fssize' is assigned value '0' here.
+ int  explicit_fssize = 0;
+                        ^
+fs/mke2fs.c:609:22: note: The comparison 'explicit_fssize == 0' is always true.
+ if (explicit_fssize == 0 && offset > 0) {
+                     ^
+fs/mke2fs.c:671:17: style: The comparison 'inode_size == 0' is always true. [knownConditionTrueFalse]
+ if (inode_size == 0)
+                ^
+fs/mke2fs.c:399:20: note: 'inode_size' is assigned value '0' here.
+ int  inode_size = 0;
+                   ^
+fs/mke2fs.c:671:17: note: The comparison 'inode_size == 0' is always true.
+ if (inode_size == 0)
+                ^
+fs/mke2fs.c:751:19: style: The comparison 'num_backups >= 2' is always true. [knownConditionTrueFalse]
+  if (num_backups >= 2)
+                  ^
+fs/mke2fs.c:406:21: note: 'num_backups' is assigned value '2' here.
+ int  num_backups = 2; /* number of backup bg's for sparse_super2 */
+                    ^
+fs/mke2fs.c:751:19: note: The comparison 'num_backups >= 2' is always true.
+  if (num_backups >= 2)
+                  ^
+fs/mke2fs.c:307:16: style: The scope of the variable 'magic' can be reduced. [variableScope]
+ unsigned int *magic;
+               ^
+fs/mke2fs.c:406:7: style: The scope of the variable 'num_backups' can be reduced. [variableScope]
+ int  num_backups = 2; /* number of backup bg's for sparse_super2 */
+      ^
+handlers/btrfs_handler.c:52:16: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+  globalpath = alloca(strlen(get_tmpdir()) +
+               ^
+handlers/copy_handler.c:139:6: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+ ret = pthread_join(chain_handler_thread_id, &status);
+     ^
+handlers/copy_handler.c:124:6: note: ret is assigned
+ ret = copyfile(fdin,
+     ^
+handlers/copy_handler.c:139:6: note: ret is overwritten
+ ret = pthread_join(chain_handler_thread_id, &status);
+     ^
+handlers/delta_downloader.c:74:6: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ int ret;
+     ^
+handlers/delta_downloader.c:142:10: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ ssize_t ret;
+         ^
+handlers/delta_handler.c:479:6: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ int ret;
+     ^
+handlers/delta_handler.c:561:11: style: The scope of the variable 'crc' can be reduced. [variableScope]
+ uint32_t crc;
+          ^
+handlers/delta_handler.c:614:9: style: The scope of the variable 'pair' can be reduced. [variableScope]
+ char **pair;
+        ^
+handlers/delta_handler.c:615:6: style: The scope of the variable 'cnt' can be reduced. [variableScope]
+ int cnt;
+     ^
+handlers/delta_handler.c:87:7: style: struct member 'dwlchunk::completed' is never used. [unusedStructMember]
+ bool completed;
+      ^
+handlers/diskpart_handler.c:1648:12: style: Condition 'num>=2' is always false [knownConditionTrueFalse]
+   if (num >= 2) {
+           ^
+handlers/diskpart_handler.c:1646:9: note: Assignment 'num=0', assigned value is 0
+  num = 0;
+        ^
+handlers/diskpart_handler.c:1648:12: note: Condition 'num>=2' is always false
+   if (num >= 2) {
+           ^
+handlers/diskpart_handler.c:523:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+ size_t i;
+        ^
+handlers/diskpart_handler.c:736:16: style: The scope of the variable 'i' can be reduced. [variableScope]
+ unsigned long i;
+               ^
+handlers/diskpart_handler.c:806:6: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ int ret = 0;
+     ^
+handlers/diskpart_handler.c:806:10: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+ int ret = 0;
+         ^
+handlers/flash_hamming1_handler.c:162:13: error: The address of local variable 'ecc' is accessed at non-zero index. [objectIndex]
+ code[1] = p[2];
+            ^
+handlers/flash_hamming1_handler.c:159:24: note: Address of variable taken here.
+ p = (unsigned char *) &ecc;
+                       ^
+handlers/flash_hamming1_handler.c:162:13: note: The address of local variable 'ecc' is accessed at non-zero index.
+ code[1] = p[2];
+            ^
+handlers/flash_hamming1_handler.c:163:13: error: The address of local variable 'ecc' is accessed at non-zero index. [objectIndex]
+ code[2] = p[1] | (p[3] << 4);
+            ^
+handlers/flash_hamming1_handler.c:159:24: note: Address of variable taken here.
+ p = (unsigned char *) &ecc;
+                       ^
+handlers/flash_hamming1_handler.c:163:13: note: The address of local variable 'ecc' is accessed at non-zero index.
+ code[2] = p[1] | (p[3] << 4);
+            ^
+handlers/flash_hamming1_handler.c:99:16: style: The scope of the variable 'val' can be reduced. [variableScope]
+ unsigned char val;
+               ^
+handlers/flash_handler.c:218:12: style: Variable 'imglen' is assigned a value that is never used. [unreadVariable]
+    imglen = 0;
+           ^
+handlers/raw_handler.c:158:22: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+ char* DATADST_DIR = alloca(strlen(get_tmpdir())+strlen(DATADST_DIR_SUFFIX)+1);
+                     ^
+handlers/rdiff_handler.c:284:17: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+   mountpoint = alloca(strlen(get_tmpdir()) + strlen(DATADST_DIR_SUFFIX) + 1);
+                ^
+handlers/rdiff_handler.c:294:25: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+   base_file_filename = alloca(strlen(mountpoint) + strlen(img->path) + 1);
+                        ^
+handlers/rdiff_handler.c:186:29: style: Variable 'drain_run_result' is assigned a value that is never used. [unreadVariable]
+ rs_result drain_run_result = RS_RUNNING;
+                            ^
+handlers/remote_handler.c:51:32: warning:inconclusive: Possible null pointer dereference: body [nullPointer]
+    memcpy (zmq_msg_data(msg), body, size);
+                               ^
+handlers/remote_handler.c:189:28: note: Calling function 'RHset_payload', 2nd argument 'NULL' value is 0
+ RHset_payload(&RHmessage, NULL, 0);
+                           ^
+handlers/remote_handler.c:51:32: note: Null pointer dereference
+    memcpy (zmq_msg_data(msg), body, size);
+                               ^
+handlers/remote_handler.c:57:6: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ int ret;
+     ^
+handlers/remote_handler.c:75:6: style: The scope of the variable 'newtimeout' can be reduced. [variableScope]
+ int newtimeout;
+     ^
+handlers/remote_handler.c:35:8: style: struct member 'remote_command::cmd' is never used. [unusedStructMember]
+ char *cmd;
+       ^
+handlers/ssbl_handler.c:103:11: style: Condition 'num>=2' is always false [knownConditionTrueFalse]
+  if (num >= 2) {
+          ^
+handlers/ssbl_handler.c:93:12: note: Assignment 'num=0', assigned value is 0
+ int num = 0;
+           ^
+handlers/ssbl_handler.c:99:6: note: Assuming condition is false
+ if (!proplist)
+     ^
+handlers/ssbl_handler.c:103:11: note: Condition 'num>=2' is always false
+  if (num >= 2) {
+          ^
+handlers/ssbl_handler.c:94:12: style: The scope of the variable 'pval' can be reduced. [variableScope]
+ uint32_t *pval;
+           ^
+handlers/ssbl_handler.c:268:71: error: Signed integer overflow for expression '0x1CEEDBEE<<3'. [integerOverflow]
+ pssbl->ssbl.magic_age = (pssbl->ssbl.magic_age & 0x07) | (SSBL_MAGIC << 3);
+                                                                      ^
+handlers/swuforward_handler.c:196:20: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+ posturl = (char *)alloca(strlen(conn->url) + strlen(POST_URL_V2) + 1);
+                   ^
+handlers/swuforward_handler.c:119:8: portability: 'tmp' is of type 'const void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+   tmp += written;
+       ^
+handlers/ubivol_handler.c:492:12: style: Condition 'num>=2' is always false [knownConditionTrueFalse]
+   if (num >= 2) {
+           ^
+handlers/ubivol_handler.c:490:9: note: Assignment 'num=0', assigned value is 0
+  num = 0;
+        ^
+handlers/ubivol_handler.c:492:12: note: Condition 'num>=2' is always false
+   if (num >= 2) {
+           ^
+handlers/ubivol_handler.c:262:13: style: Variable 'ubivol' is reassigned a value before the old one has been used. [redundantAssignment]
+ for(ubivol = mtd_info->ubi_partitions.lh_first;
+            ^
+handlers/ubivol_handler.c:261:9: note: ubivol is assigned
+ ubivol = mtd_info->ubi_partitions.lh_first;
+        ^
+handlers/ubivol_handler.c:262:13: note: ubivol is overwritten
+ for(ubivol = mtd_info->ubi_partitions.lh_first;
+            ^
+handlers/ubivol_handler.c:42:19: style: The scope of the variable 'ubivol' can be reduced. [variableScope]
+ struct ubi_part *ubivol;
+                  ^
+handlers/ucfw_handler.c:413:7: style: The scope of the variable 'c' can be reduced. [variableScope]
+ char c;
+      ^
+handlers/zchunk_range.c:163:60: style:inconclusive: Function 'zchunk_get_missing_range' argument 2 names different: declaration 'chk' definition 'first'. [funcArgNamesDifferent]
+zck_range *zchunk_get_missing_range(zckCtx *zck, zckChunk *first, int max_ranges) {
+                                                           ^
+handlers/zchunk_range.h:32:60: note: Function 'zchunk_get_missing_range' argument 2 names different: declaration 'chk' definition 'first'.
+zck_range *zchunk_get_missing_range(zckCtx *zck, zckChunk *chk, int max_ranges);
+                                                           ^
+handlers/zchunk_range.c:163:60: note: Function 'zchunk_get_missing_range' argument 2 names different: declaration 'chk' definition 'first'.
+zck_range *zchunk_get_missing_range(zckCtx *zck, zckChunk *first, int max_ranges) {
+                                                           ^
+ipc/network_ipc.c:313:10: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ ssize_t ret;
+         ^
+ipc/network_ipc.c:334:6: style: The scope of the variable 'fd' can be reduced. [variableScope]
+ int fd;
+     ^
+ipc/network_ipc.c:337:6: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ int ret;
+     ^
+ipc/network_ipc.c:22:0: information: Skipping configuration 'CONFIG_SOCKET_CTRL_PATH' since the value of 'CONFIG_SOCKET_CTRL_PATH' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+static char* SOCKET_CTRL_PATH = (char*)CONFIG_SOCKET_CTRL_PATH;
+^
+ipc/progress_ipc.c:20:0: information: Skipping configuration 'CONFIG_SOCKET_PROGRESS_PATH' since the value of 'CONFIG_SOCKET_PROGRESS_PATH' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+char *SOCKET_PROGRESS_PATH = (char*)CONFIG_SOCKET_PROGRESS_PATH;
+^
+mongoose/mongoose.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 62 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/base64.c:38:7: warning: The address of local variable 'buf' might be accessed at non-zero index. [objectIndex]
+
+      ^
+src/http.c:76:26: note: Address of variable taken here.
+
+                         ^
+src/http.c:79:62: note: Calling function 'mg_base64_update', 2nd argument 'buf+21' value is lifetime=buf
+
+                                                             ^
+src/base64.c:38:7: note: The address of local variable 'buf' might be accessed at non-zero index.
+
+      ^
+src/base64.c:39:7: warning: The address of local variable 'buf' might be accessed at non-zero index. [objectIndex]
+
+      ^
+src/http.c:76:26: note: Address of variable taken here.
+
+                         ^
+src/http.c:79:62: note: Calling function 'mg_base64_update', 2nd argument 'buf+21' value is lifetime=buf
+
+                                                             ^
+src/base64.c:39:7: note: The address of local variable 'buf' might be accessed at non-zero index.
+
+      ^
+src/base64.c:41:7: warning: The address of local variable 'buf' might be accessed at non-zero index. [objectIndex]
+
+      ^
+src/http.c:76:26: note: Address of variable taken here.
+
+                         ^
+src/http.c:79:62: note: Calling function 'mg_base64_update', 2nd argument 'buf+21' value is lifetime=buf
+
+                                                             ^
+src/base64.c:41:7: note: The address of local variable 'buf' might be accessed at non-zero index.
+
+      ^
+src/base64.c:42:7: warning: The address of local variable 'buf' might be accessed at non-zero index. [objectIndex]
+
+      ^
+src/http.c:76:26: note: Address of variable taken here.
+
+                         ^
+src/http.c:79:62: note: Calling function 'mg_base64_update', 2nd argument 'buf+21' value is lifetime=buf
+
+                                                             ^
+src/base64.c:42:7: note: The address of local variable 'buf' might be accessed at non-zero index.
+
+      ^
+src/base64.c:44:7: warning: The address of local variable 'buf' might be accessed at non-zero index. [objectIndex]
+
+      ^
+src/http.c:76:26: note: Address of variable taken here.
+
+                         ^
+src/http.c:79:62: note: Calling function 'mg_base64_update', 2nd argument 'buf+21' value is lifetime=buf
+
+                                                             ^
+src/base64.c:44:7: note: The address of local variable 'buf' might be accessed at non-zero index.
+
+      ^
+src/base64.c:45:7: warning: The address of local variable 'buf' might be accessed at non-zero index. [objectIndex]
+
+      ^
+src/http.c:76:26: note: Address of variable taken here.
+
+                         ^
+src/http.c:79:62: note: Calling function 'mg_base64_update', 2nd argument 'buf+21' value is lifetime=buf
+
+                                                             ^
+src/base64.c:45:7: note: The address of local variable 'buf' might be accessed at non-zero index.
+
+      ^
+src/base64.c:57:19: warning: The address of local variable 'buf' might be accessed at non-zero index. [objectIndex]
+
+                  ^
+src/http.c:76:26: note: Address of variable taken here.
+
+                         ^
+src/http.c:87:29: note: Calling function 'mg_base64_final', 1st argument 'buf+21' value is lifetime=buf
+
+                            ^
+src/base64.c:57:19: note: The address of local variable 'buf' might be accessed at non-zero index.
+
+                  ^
+src/base64.c:58:5: warning: The address of local variable 'buf' might be accessed at non-zero index. [objectIndex]
+
+    ^
+src/http.c:76:26: note: Address of variable taken here.
+
+                         ^
+src/http.c:87:29: note: Calling function 'mg_base64_final', 1st argument 'buf+21' value is lifetime=buf
+
+                            ^
+src/base64.c:58:5: note: The address of local variable 'buf' might be accessed at non-zero index.
+
+    ^
+src/str.c:179:74: warning: The address of local variable 'ptr' might be accessed at non-zero index. [objectIndex]
+
+                                                                         ^
+src/net.c:85:23: note: Address of variable taken here.
+
+                      ^
+src/net.c:85:23: note: Calling function 'mg_unhexn', 1st argument '&str.ptr[j]' value is lifetime=ptr
+
+                      ^
+src/str.c:179:74: note: The address of local variable 'ptr' might be accessed at non-zero index.
+
+                                                                         ^
+src/sock.c:538:42: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+
+                                         ^
+src/sock.c:100:16: style: Expression is always true because 'else if' condition is opposite to previous condition at line 98. [multiCondition]
+
+               ^
+src/sock.c:98:16: note: first condition
+
+               ^
+src/sock.c:100:16: note: else if condition is opposite to first condition
+
+               ^
+src/fmt.c:246:17: style: The scope of the variable 'k' can be reduced. [variableScope]
+
+                ^
+src/mqtt.c:34:8: style: The scope of the variable 'rnd' can be reduced. [variableScope]
+
+       ^
+src/mqtt.c:34:17: style: The scope of the variable 'client_id' can be reduced. [variableScope]
+
+                ^
+src/ws.c:67:10: style: The scope of the variable 'i' can be reduced. [variableScope]
+
+         ^
+src/ws.c:67:13: style: The scope of the variable 'n' can be reduced. [variableScope]
+
+            ^
+src/base64.c:35:36: style:inconclusive: Function 'mg_base64_update' argument 1 names different: declaration 'p' definition 'ch'. [funcArgNamesDifferent]
+
+                                   ^
+mongoose/mongoose.h:949:36: note: Function 'mg_base64_update' argument 1 names different: declaration 'p' definition 'ch'.
+int mg_base64_update(unsigned char p, char *to, int len);
+                                   ^
+src/base64.c:35:36: note: Function 'mg_base64_update' argument 1 names different: declaration 'p' definition 'ch'.
+
+                                   ^
+src/base64.c:35:54: style:inconclusive: Function 'mg_base64_update' argument 3 names different: declaration 'len' definition 'n'. [funcArgNamesDifferent]
+
+                                                     ^
+mongoose/mongoose.h:949:53: note: Function 'mg_base64_update' argument 3 names different: declaration 'len' definition 'n'.
+int mg_base64_update(unsigned char p, char *to, int len);
+                                                    ^
+src/base64.c:35:54: note: Function 'mg_base64_update' argument 3 names different: declaration 'len' definition 'n'.
+
+                                                     ^
+src/base64.c:51:35: style:inconclusive: Function 'mg_base64_final' argument 2 names different: declaration 'len' definition 'n'. [funcArgNamesDifferent]
+
+                                  ^
+mongoose/mongoose.h:950:35: note: Function 'mg_base64_final' argument 2 names different: declaration 'len' definition 'n'.
+int mg_base64_final(char *to, int len);
+                                  ^
+src/base64.c:51:35: note: Function 'mg_base64_final' argument 2 names different: declaration 'len' definition 'n'.
+
+                                  ^
+src/fs.c:25:64: style:inconclusive: Function 'mg_file_read' argument 3 names different: declaration 'size' definition 'sizep'. [funcArgNamesDifferent]
+
+                                                               ^
+mongoose/mongoose.h:880:64: note: Function 'mg_file_read' argument 3 names different: declaration 'size' definition 'sizep'.
+char *mg_file_read(struct mg_fs *fs, const char *path, size_t *size);
+                                                               ^
+src/fs.c:25:64: note: Function 'mg_file_read' argument 3 names different: declaration 'size' definition 'sizep'.
+
+                                                               ^
+src/http.c:131:31: style:inconclusive: Function 'mg_url_decode' argument 1 names different: declaration 's' definition 'src'. [funcArgNamesDifferent]
+
+                              ^
+mongoose/mongoose.h:1169:31: note: Function 'mg_url_decode' argument 1 names different: declaration 's' definition 'src'.
+int mg_url_decode(const char *s, size_t n, char *to, size_t to_len, int form);
+                              ^
+src/http.c:131:31: note: Function 'mg_url_decode' argument 1 names different: declaration 's' definition 'src'.
+
+                              ^
+src/http.c:131:43: style:inconclusive: Function 'mg_url_decode' argument 2 names different: declaration 'n' definition 'src_len'. [funcArgNamesDifferent]
+
+                                          ^
+mongoose/mongoose.h:1169:41: note: Function 'mg_url_decode' argument 2 names different: declaration 'n' definition 'src_len'.
+int mg_url_decode(const char *s, size_t n, char *to, size_t to_len, int form);
+                                        ^
+src/http.c:131:43: note: Function 'mg_url_decode' argument 2 names different: declaration 'n' definition 'src_len'.
+
+                                          ^
+src/http.c:131:58: style:inconclusive: Function 'mg_url_decode' argument 3 names different: declaration 'to' definition 'dst'. [funcArgNamesDifferent]
+
+                                                         ^
+mongoose/mongoose.h:1169:50: note: Function 'mg_url_decode' argument 3 names different: declaration 'to' definition 'dst'.
+int mg_url_decode(const char *s, size_t n, char *to, size_t to_len, int form);
+                                                 ^
+src/http.c:131:58: note: Function 'mg_url_decode' argument 3 names different: declaration 'to' definition 'dst'.
+
+                                                         ^
+src/http.c:131:70: style:inconclusive: Function 'mg_url_decode' argument 4 names different: declaration 'to_len' definition 'dst_len'. [funcArgNamesDifferent]
+
+                                                                     ^
+mongoose/mongoose.h:1169:61: note: Function 'mg_url_decode' argument 4 names different: declaration 'to_len' definition 'dst_len'.
+int mg_url_decode(const char *s, size_t n, char *to, size_t to_len, int form);
+                                                            ^
+src/http.c:131:70: note: Function 'mg_url_decode' argument 4 names different: declaration 'to_len' definition 'dst_len'.
+
+                                                                     ^
+src/http.c:132:23: style:inconclusive: Function 'mg_url_decode' argument 5 names different: declaration 'form' definition 'is_form_url_encoded'. [funcArgNamesDifferent]
+
+                      ^
+mongoose/mongoose.h:1169:73: note: Function 'mg_url_decode' argument 5 names different: declaration 'form' definition 'is_form_url_encoded'.
+int mg_url_decode(const char *s, size_t n, char *to, size_t to_len, int form);
+                                                                        ^
+src/http.c:132:23: note: Function 'mg_url_decode' argument 5 names different: declaration 'form' definition 'is_form_url_encoded'.
+
+                      ^
+src/http.c:281:49: style:inconclusive: Function 'mg_http_printf_chunk' argument 1 names different: declaration 'cnn' definition 'c'. [funcArgNamesDifferent]
+
+                                                ^
+mongoose/mongoose.h:1153:49: note: Function 'mg_http_printf_chunk' argument 1 names different: declaration 'cnn' definition 'c'.
+void mg_http_printf_chunk(struct mg_connection *cnn, const char *fmt, ...);
+                                                ^
+src/http.c:281:49: note: Function 'mg_http_printf_chunk' argument 1 names different: declaration 'cnn' definition 'c'.
+
+                                                ^
+src/http.c:318:49: style:inconclusive: Function 'mg_http_reply' argument 2 names different: declaration 'status_code' definition 'code'. [funcArgNamesDifferent]
+
+                                                ^
+mongoose/mongoose.h:1164:48: note: Function 'mg_http_reply' argument 2 names different: declaration 'status_code' definition 'code'.
+void mg_http_reply(struct mg_connection *, int status_code, const char *headers,
+                                               ^
+src/http.c:318:49: note: Function 'mg_http_reply' argument 2 names different: declaration 'status_code' definition 'code'.
+
+                                                ^
+src/http.c:319:32: style:inconclusive: Function 'mg_http_reply' argument 4 names different: declaration 'body_fmt' definition 'fmt'. [funcArgNamesDifferent]
+
+                               ^
+mongoose/mongoose.h:1165:32: note: Function 'mg_http_reply' argument 4 names different: declaration 'body_fmt' definition 'fmt'.
+                   const char *body_fmt, ...);
+                               ^
+src/http.c:319:32: note: Function 'mg_http_reply' argument 4 names different: declaration 'body_fmt' definition 'fmt'.
+
+                               ^
+src/http.c:743:44: style:inconclusive: Function 'mg_url_encode' argument 2 names different: declaration 'n' definition 'sl'. [funcArgNamesDifferent]
+
+                                           ^
+mongoose/mongoose.h:1170:44: note: Function 'mg_url_encode' argument 2 names different: declaration 'n' definition 'sl'.
+size_t mg_url_encode(const char *s, size_t n, char *buf, size_t len);
+                                           ^
+src/http.c:743:44: note: Function 'mg_url_encode' argument 2 names different: declaration 'n' definition 'sl'.
+
+                                           ^
+src/json.c:274:66: style:inconclusive: Function 'mg_json_get_b64' argument 3 names different: declaration 'len' definition 'slen'. [funcArgNamesDifferent]
+
+                                                                 ^
+mongoose/mongoose.h:1395:66: note: Function 'mg_json_get_b64' argument 3 names different: declaration 'len' definition 'slen'.
+char *mg_json_get_b64(struct mg_str json, const char *path, int *len);
+                                                                 ^
+src/json.c:274:66: note: Function 'mg_json_get_b64' argument 3 names different: declaration 'len' definition 'slen'.
+
+                                                                 ^
+src/json.c:285:66: style:inconclusive: Function 'mg_json_get_hex' argument 3 names different: declaration 'len' definition 'slen'. [funcArgNamesDifferent]
+
+                                                                 ^
+mongoose/mongoose.h:1394:66: note: Function 'mg_json_get_hex' argument 3 names different: declaration 'len' definition 'slen'.
+char *mg_json_get_hex(struct mg_str json, const char *path, int *len);
+                                                                 ^
+src/json.c:285:66: note: Function 'mg_json_get_hex' argument 3 names different: declaration 'len' definition 'slen'.
+
+                                                                 ^
+src/log.c:35:24: style:inconclusive: Function 'mg_log_prefix' argument 1 names different: declaration 'll' definition 'level'. [funcArgNamesDifferent]
+
+                       ^
+mongoose/mongoose.h:797:24: note: Function 'mg_log_prefix' argument 1 names different: declaration 'll' definition 'level'.
+bool mg_log_prefix(int ll, const char *file, int line, const char *fname);
+                       ^
+src/log.c:35:24: note: Function 'mg_log_prefix' argument 1 names different: declaration 'll' definition 'level'.
+
+                       ^
+src/md5.c:32:30: style:inconclusive: Function 'mg_md5_init' argument 1 names different: declaration 'c' definition 'ctx'. [funcArgNamesDifferent]
+
+                             ^
+mongoose/mongoose.h:963:30: note: Function 'mg_md5_init' argument 1 names different: declaration 'c' definition 'ctx'.
+void mg_md5_init(mg_md5_ctx *c);
+                             ^
+src/md5.c:32:30: note: Function 'mg_md5_init' argument 1 names different: declaration 'c' definition 'ctx'.
+
+                             ^
+src/md5.c:124:32: style:inconclusive: Function 'mg_md5_update' argument 1 names different: declaration 'c' definition 'ctx'. [funcArgNamesDifferent]
+
+                               ^
+mongoose/mongoose.h:964:32: note: Function 'mg_md5_update' argument 1 names different: declaration 'c' definition 'ctx'.
+void mg_md5_update(mg_md5_ctx *c, const unsigned char *data, size_t len);
+                               ^
+src/md5.c:124:32: note: Function 'mg_md5_update' argument 1 names different: declaration 'c' definition 'ctx'.
+
+                               ^
+src/md5.c:124:58: style:inconclusive: Function 'mg_md5_update' argument 2 names different: declaration 'data' definition 'buf'. [funcArgNamesDifferent]
+
+                                                         ^
+mongoose/mongoose.h:964:56: note: Function 'mg_md5_update' argument 2 names different: declaration 'data' definition 'buf'.
+void mg_md5_update(mg_md5_ctx *c, const unsigned char *data, size_t len);
+                                                       ^
+src/md5.c:124:58: note: Function 'mg_md5_update' argument 2 names different: declaration 'data' definition 'buf'.
+
+                                                         ^
+src/md5.c:159:31: style:inconclusive: Function 'mg_md5_final' argument 1 names different: declaration 'c' definition 'ctx'. [funcArgNamesDifferent]
+
+                              ^
+mongoose/mongoose.h:965:31: note: Function 'mg_md5_final' argument 1 names different: declaration 'c' definition 'ctx'.
+void mg_md5_final(mg_md5_ctx *c, unsigned char[16]);
+                              ^
+src/md5.c:159:31: note: Function 'mg_md5_final' argument 1 names different: declaration 'c' definition 'ctx'.
+
+                              ^
+src/rpc.c:4:53: style:inconclusive: Function 'mg_rpc_add' argument 2 names different: declaration 'method_pattern' definition 'method'. [funcArgNamesDifferent]
+
+                                                    ^
+mongoose/mongoose.h:1418:53: note: Function 'mg_rpc_add' argument 2 names different: declaration 'method_pattern' definition 'method'.
+void mg_rpc_add(struct mg_rpc **head, struct mg_str method_pattern,
+                                                    ^
+src/rpc.c:4:53: note: Function 'mg_rpc_add' argument 2 names different: declaration 'method_pattern' definition 'method'.
+
+                                                    ^
+src/rpc.c:5:56: style:inconclusive: Function 'mg_rpc_add' argument 4 names different: declaration 'handler_data' definition 'fn_data'. [funcArgNamesDifferent]
+
+                                                       ^
+mongoose/mongoose.h:1419:61: note: Function 'mg_rpc_add' argument 4 names different: declaration 'handler_data' definition 'fn_data'.
+                void (*handler)(struct mg_rpc_req *), void *handler_data);
+                                                            ^
+src/rpc.c:5:56: note: Function 'mg_rpc_add' argument 4 names different: declaration 'handler_data' definition 'fn_data'.
+
+                                                       ^
+src/sntp.c:76:68: style:inconclusive: Function 'mg_sntp_connect' argument 4 names different: declaration 'fn_data' definition 'fnd'. [funcArgNamesDifferent]
+
+                                                                   ^
+mongoose/mongoose.h:1275:68: note: Function 'mg_sntp_connect' argument 4 names different: declaration 'fn_data' definition 'fnd'.
+                                      mg_event_handler_t fn, void *fn_data);
+                                                                   ^
+src/sntp.c:76:68: note: Function 'mg_sntp_connect' argument 4 names different: declaration 'fn_data' definition 'fnd'.
+
+                                                                   ^
+src/str.c:96:29: style:inconclusive: Function 'mg_match' argument 1 names different: declaration 'str' definition 's'. [funcArgNamesDifferent]
+
+                            ^
+mongoose/mongoose.h:763:29: note: Function 'mg_match' argument 1 names different: declaration 'str' definition 's'.
+bool mg_match(struct mg_str str, struct mg_str pattern, struct mg_str *caps);
+                            ^
+src/str.c:96:29: note: Function 'mg_match' argument 1 names different: declaration 'str' definition 's'.
+
+                            ^
+src/str.c:96:46: style:inconclusive: Function 'mg_match' argument 2 names different: declaration 'pattern' definition 'p'. [funcArgNamesDifferent]
+
+                                             ^
+mongoose/mongoose.h:763:48: note: Function 'mg_match' argument 2 names different: declaration 'pattern' definition 'p'.
+bool mg_match(struct mg_str str, struct mg_str pattern, struct mg_str *caps);
+                                               ^
+src/str.c:96:46: note: Function 'mg_match' argument 2 names different: declaration 'pattern' definition 'p'.
+
+                                             ^
+src/str.c:128:31: style:inconclusive: Function 'mg_globmatch' argument 1 names different: declaration 'pattern' definition 's1'. [funcArgNamesDifferent]
+
+                              ^
+mongoose/mongoose.h:764:31: note: Function 'mg_globmatch' argument 1 names different: declaration 'pattern' definition 's1'.
+bool mg_globmatch(const char *pattern, size_t plen, const char *s, size_t n);
+                              ^
+src/str.c:128:31: note: Function 'mg_globmatch' argument 1 names different: declaration 'pattern' definition 's1'.
+
+                              ^
+src/str.c:128:42: style:inconclusive: Function 'mg_globmatch' argument 2 names different: declaration 'plen' definition 'n1'. [funcArgNamesDifferent]
+
+                                         ^
+mongoose/mongoose.h:764:47: note: Function 'mg_globmatch' argument 2 names different: declaration 'plen' definition 'n1'.
+bool mg_globmatch(const char *pattern, size_t plen, const char *s, size_t n);
+                                              ^
+src/str.c:128:42: note: Function 'mg_globmatch' argument 2 names different: declaration 'plen' definition 'n1'.
+
+                                         ^
+src/str.c:128:58: style:inconclusive: Function 'mg_globmatch' argument 3 names different: declaration 's' definition 's2'. [funcArgNamesDifferent]
+
+                                                         ^
+mongoose/mongoose.h:764:65: note: Function 'mg_globmatch' argument 3 names different: declaration 's' definition 's2'.
+bool mg_globmatch(const char *pattern, size_t plen, const char *s, size_t n);
+                                                                ^
+src/str.c:128:58: note: Function 'mg_globmatch' argument 3 names different: declaration 's' definition 's2'.
+
+                                                         ^
+src/str.c:128:69: style:inconclusive: Function 'mg_globmatch' argument 4 names different: declaration 'n' definition 'n2'. [funcArgNamesDifferent]
+
+                                                                    ^
+mongoose/mongoose.h:764:75: note: Function 'mg_globmatch' argument 4 names different: declaration 'n' definition 'n2'.
+bool mg_globmatch(const char *pattern, size_t plen, const char *s, size_t n);
+                                                                          ^
+src/str.c:128:69: note: Function 'mg_globmatch' argument 4 names different: declaration 'n' definition 'n2'.
+
+                                                                    ^
+src/str.c:145:74: style:inconclusive: Function 'mg_split' argument 4 names different: declaration 'delim' definition 'sep'. [funcArgNamesDifferent]
+
+                                                                         ^
+mongoose/mongoose.h:766:74: note: Function 'mg_split' argument 4 names different: declaration 'delim' definition 'sep'.
+bool mg_split(struct mg_str *s, struct mg_str *k, struct mg_str *v, char delim);
+                                                                         ^
+src/str.c:145:74: note: Function 'mg_split' argument 4 names different: declaration 'delim' definition 'sep'.
+
+                                                                         ^
+src/str.c:159:49: style:inconclusive: Function 'mg_hex' argument 3 names different: declaration 'dst' definition 'to'. [funcArgNamesDifferent]
+
+                                                ^
+mongoose/mongoose.h:767:49: note: Function 'mg_hex' argument 3 names different: declaration 'dst' definition 'to'.
+char *mg_hex(const void *buf, size_t len, char *dst);
+                                                ^
+src/str.c:159:49: note: Function 'mg_hex' argument 3 names different: declaration 'dst' definition 'to'.
+
+                                                ^
+src/timer.c:7:61: style:inconclusive: Function 'mg_timer_init' argument 2 names different: declaration 'timer' definition 't'. [funcArgNamesDifferent]
+
+                                                            ^
+mongoose/mongoose.h:835:61: note: Function 'mg_timer_init' argument 2 names different: declaration 'timer' definition 't'.
+void mg_timer_init(struct mg_timer **head, struct mg_timer *timer,
+                                                            ^
+src/timer.c:7:61: note: Function 'mg_timer_init' argument 2 names different: declaration 'timer' definition 't'.
+
+                                                            ^
+src/timer.c:7:73: style:inconclusive: Function 'mg_timer_init' argument 3 names different: declaration 'milliseconds' definition 'ms'. [funcArgNamesDifferent]
+
+                                                                        ^
+mongoose/mongoose.h:836:29: note: Function 'mg_timer_init' argument 3 names different: declaration 'milliseconds' definition 'ms'.
+                   uint64_t milliseconds, unsigned flags, void (*fn)(void *),
+                            ^
+src/timer.c:7:73: note: Function 'mg_timer_init' argument 3 names different: declaration 'milliseconds' definition 'ms'.
+
+                                                                        ^
+src/timer.c:20:33: style:inconclusive: Function 'mg_timer_expired' argument 1 names different: declaration 'expiration' definition 't'. [funcArgNamesDifferent]
+
+                                ^
+mongoose/mongoose.h:840:33: note: Function 'mg_timer_expired' argument 1 names different: declaration 'expiration' definition 't'.
+bool mg_timer_expired(uint64_t *expiration, uint64_t period, uint64_t now);
+                                ^
+src/timer.c:20:33: note: Function 'mg_timer_expired' argument 1 names different: declaration 'expiration' definition 't'.
+
+                                ^
+src/timer.c:20:45: style:inconclusive: Function 'mg_timer_expired' argument 2 names different: declaration 'period' definition 'prd'. [funcArgNamesDifferent]
+
+                                            ^
+mongoose/mongoose.h:840:54: note: Function 'mg_timer_expired' argument 2 names different: declaration 'period' definition 'prd'.
+bool mg_timer_expired(uint64_t *expiration, uint64_t period, uint64_t now);
+                                                     ^
+src/timer.c:20:45: note: Function 'mg_timer_expired' argument 2 names different: declaration 'period' definition 'prd'.
+
+                                            ^
+src/timer.c:28:53: style:inconclusive: Function 'mg_timer_poll' argument 2 names different: declaration 'new_ms' definition 'now_ms'. [funcArgNamesDifferent]
+
+                                                    ^
+mongoose/mongoose.h:839:53: note: Function 'mg_timer_poll' argument 2 names different: declaration 'new_ms' definition 'now_ms'.
+void mg_timer_poll(struct mg_timer **head, uint64_t new_ms);
+                                                    ^
+src/timer.c:28:53: note: Function 'mg_timer_poll' argument 2 names different: declaration 'new_ms' definition 'now_ms'.
+
+                                                    ^
+src/sock.c:573:61: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+
+                                                            ^
+src/sock.c:574:63: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+
+                                                              ^
+src/http.c:552:16: style: Variable 'n' is assigned a value that is never used. [unreadVariable]
+
+               ^
+src/mqtt.c:163:9: style: Variable 'p' is assigned a value that is never used. [unreadVariable]
+
+        ^
+src/rpc.c:43:19: style: Variable 'off' is assigned a value that is never used. [unreadVariable]
+
+                  ^
+src/sock.c:263:10: style: Variable 'n' is assigned a value that is never used. [unreadVariable]
+
+         ^
+src/ws.c:67:15: style: Variable 'n' is assigned a value that is never used. [unreadVariable]
+
+              ^
+mongoose/mongoose_interface.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+mongoose/mongoose_interface.c:233:7: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+  if (sscanf(buf, "%[^:]:%[^:]:%s", f_user, f_domain, f_ha1) == 3 &&
+      ^
+mongoose/mongoose_interface.c:276:8: style: The scope of the variable 'fp' can be reduced. [variableScope]
+ FILE *fp;
+       ^
+mongoose/mongoose_interface.c:192:66: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ cs_md5(ha2, method.ptr, method.len, colon, one, uri.ptr, uri.len, NULL);
+                                                                 ^
+mongoose/mongoose_interface.c:195:38: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+     colon, one, ha2, sizeof(ha2) - 1, NULL);
+                                     ^
+mongoose/mongoose_multipart.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+mongoose/mongoose_multipart.c:313:17: style: The scope of the variable 's' can be reduced. [variableScope]
+ struct mg_str *s;
+                ^
+mongoose/mongoose_multipart.c:308:53: style:inconclusive: Function 'multipart_upload_handler' argument 1 names different: declaration 'nc' definition 'c'. [funcArgNamesDifferent]
+void multipart_upload_handler(struct mg_connection *c, int ev, void *ev_data,
+                                                    ^
+mongoose/mongoose_multipart.h:48:53: note: Function 'multipart_upload_handler' argument 1 names different: declaration 'nc' definition 'c'.
+void multipart_upload_handler(struct mg_connection *nc, int ev, void *ev_data, void *fn_data);
+                                                    ^
+mongoose/mongoose_multipart.c:308:53: note: Function 'multipart_upload_handler' argument 1 names different: declaration 'nc' definition 'c'.
+void multipart_upload_handler(struct mg_connection *c, int ev, void *ev_data,
+                                                    ^
+parser/parse_external.c:36:7: style: The scope of the variable 'seek_str' can be reduced. [variableScope]
+ char seek_str[MAX_SEEK_STRING_SIZE];
+      ^
+parser/parser.c:260:18: style: The scope of the variable 'hw' can be reduced. [variableScope]
+ void *setting, *hw;
+                 ^
+parser/parser.c:453:8: style: The scope of the variable 'elem' can be reduced. [variableScope]
+ void *elem;
+       ^
+parser/parser.c:536:8: style: The scope of the variable 'elem' can be reduced. [variableScope]
+ void *elem;
+       ^
+parser/parser.c:620:8: style: The scope of the variable 'elem' can be reduced. [variableScope]
+ void *elem;
+       ^
+parser/parser.c:724:8: style: The scope of the variable 'elem' can be reduced. [variableScope]
+ void *elem;
+       ^
+parser/parser.c:824:8: style: The scope of the variable 'elem' can be reduced. [variableScope]
+ void *elem;
+       ^
+scripts/basic/fixdep.c:217:6: style: The scope of the variable 'c' can be reduced. [variableScope]
+ int c, i;
+     ^
+scripts/kconfig/conf.c:137:14: style: The scope of the variable 'def' can be reduced. [variableScope]
+ const char *def;
+             ^
+scripts/kconfig/confdata.c:214:12: warning: The address of local variable 'line' might be accessed at non-zero index. [objectIndex]
+ (*lineptr)[slen] = c;
+           ^
+scripts/kconfig/confdata.c:229:20: note: Address of variable taken here.
+   if (add_byte(c, &line, slen, n) < 0)
+                   ^
+scripts/kconfig/confdata.c:229:20: note: Calling function 'add_byte', 2nd argument '&line' value is lifetime=line
+   if (add_byte(c, &line, slen, n) < 0)
+                   ^
+scripts/kconfig/confdata.c:214:12: note: The address of local variable 'line' might be accessed at non-zero index.
+ (*lineptr)[slen] = c;
+           ^
+scripts/kconfig/confdata.c:214:12: warning: The address of local variable 'line' might be accessed at non-zero index. [objectIndex]
+ (*lineptr)[slen] = c;
+           ^
+scripts/kconfig/confdata.c:241:20: note: Address of variable taken here.
+   if (add_byte(c, &line, slen, n) < 0)
+                   ^
+scripts/kconfig/confdata.c:241:20: note: Calling function 'add_byte', 2nd argument '&line' value is lifetime=line
+   if (add_byte(c, &line, slen, n) < 0)
+                   ^
+scripts/kconfig/confdata.c:214:12: note: The address of local variable 'line' might be accessed at non-zero index.
+ (*lineptr)[slen] = c;
+           ^
+scripts/kconfig/confdata.c:88:17: style: The scope of the variable 'sym' can be reduced. [variableScope]
+ struct symbol *sym;
+                ^
+scripts/kconfig/confdata.c:115:14: style: The scope of the variable 'fullname' can be reduced. [variableScope]
+ static char fullname[PATH_MAX+1];
+             ^
+scripts/kconfig/confdata.c:516:9: style: The scope of the variable 'l' can be reduced. [variableScope]
+ size_t l;
+        ^
+scripts/kconfig/confdata.c:588:9: style: The scope of the variable 'l' can be reduced. [variableScope]
+ size_t l;
+        ^
+scripts/kconfig/confdata.c:670:38: style:inconclusive: Function 'conf_write_defconfig' argument 1 names different: declaration 'name' definition 'filename'. [funcArgNamesDifferent]
+int conf_write_defconfig(const char *filename)
+                                     ^
+scripts/kconfig/lkc_proto.h:7:38: note: Function 'conf_write_defconfig' argument 1 names different: declaration 'name' definition 'filename'.
+int conf_write_defconfig(const char *name);
+                                     ^
+scripts/kconfig/confdata.c:670:38: note: Function 'conf_write_defconfig' argument 1 names different: declaration 'name' definition 'filename'.
+int conf_write_defconfig(const char *filename)
+                                     ^
+scripts/kconfig/confdata.c:94:6: style: Variable 'dst' is assigned a value that is never used. [unreadVariable]
+ dst = name;
+     ^
+scripts/kconfig/expr.c:249:15: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+ struct expr *tmp;
+              ^
+scripts/kconfig/gconf.c:1328:9: style: Variable 'valid' is reassigned a value before the old one has been used. [redundantAssignment]
+  valid = gtk_tree_model_iter_next(model2, child2);
+        ^
+scripts/kconfig/gconf.c:1309:12: note: valid is assigned
+     valid = TRUE;
+           ^
+scripts/kconfig/gconf.c:1328:9: note: valid is overwritten
+  valid = gtk_tree_model_iter_next(model2, child2);
+        ^
+scripts/kconfig/gconf.c:1220:15: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ GtkTreeIter *ret;
+              ^
+scripts/kconfig/gconf.c:1164:11: style: Local variable 'color' shadows outer variable [shadowVariable]
+ GdkColor color;
+          ^
+scripts/kconfig/gconf.c:55:10: note: Shadowed declaration
+GdkColor color;
+         ^
+scripts/kconfig/gconf.c:1164:11: note: Shadow variable
+ GdkColor color;
+          ^
+scripts/kconfig/gconf.c:170:9: style: Variable 'widget' is assigned a value that is never used. [unreadVariable]
+ widget = glade_xml_get_widget(xml, "toolbar1");
+        ^
+scripts/kconfig/lxdialog/textbox.c:77:14: style: Condition 'height>4' is always true [knownConditionTrueFalse]
+  if (height > 4)
+             ^
+scripts/kconfig/lxdialog/textbox.c:72:13: note: Assuming that condition 'height<8' is not redundant
+ if (height < TEXTBOX_HEIGTH_MIN || width < TEXTBOX_WIDTH_MIN)
+            ^
+scripts/kconfig/lxdialog/textbox.c:77:14: note: Condition 'height>4' is always true
+  if (height > 4)
+             ^
+scripts/kconfig/lxdialog/textbox.c:84:13: style: Condition 'width>5' is always true [knownConditionTrueFalse]
+  if (width > 5)
+            ^
+scripts/kconfig/lxdialog/textbox.c:72:43: note: Assuming that condition 'width<8' is not redundant
+ if (height < TEXTBOX_HEIGTH_MIN || width < TEXTBOX_WIDTH_MIN)
+                                          ^
+scripts/kconfig/lxdialog/textbox.c:84:13: note: Condition 'width>5' is always true
+  if (width > 5)
+            ^
+scripts/kconfig/lxdialog/util.c:372:6: style: The scope of the variable 'newl' can be reduced. [variableScope]
+ int newl, cur_x, cur_y;
+     ^
+scripts/kconfig/lxdialog/util.c:372:12: style: The scope of the variable 'cur_x' can be reduced. [variableScope]
+ int newl, cur_x, cur_y;
+           ^
+scripts/kconfig/lxdialog/util.c:372:19: style: The scope of the variable 'cur_y' can be reduced. [variableScope]
+ int newl, cur_x, cur_y;
+                  ^
+scripts/kconfig/lxdialog/util.c:373:18: style: The scope of the variable 'room' can be reduced. [variableScope]
+ int prompt_len, room, wlen;
+                 ^
+scripts/kconfig/lxdialog/util.c:373:24: style: The scope of the variable 'wlen' can be reduced. [variableScope]
+ int prompt_len, room, wlen;
+                       ^
+scripts/kconfig/lxdialog/util.c:374:30: style: The scope of the variable 'word' can be reduced. [variableScope]
+ char tempstr[MAX_LEN + 1], *word, *sp, *sp2, *newline_separator = 0;
+                             ^
+scripts/kconfig/lxdialog/util.c:374:42: style: The scope of the variable 'sp2' can be reduced. [variableScope]
+ char tempstr[MAX_LEN + 1], *word, *sp, *sp2, *newline_separator = 0;
+                                         ^
+scripts/kconfig/lxdialog/util.c:374:48: style: The scope of the variable 'newline_separator' can be reduced. [variableScope]
+ char tempstr[MAX_LEN + 1], *word, *sp, *sp2, *newline_separator = 0;
+                                               ^
+scripts/kconfig/lxdialog/util.c:501:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+scripts/kconfig/lxdialog/util.c:522:23: style: The scope of the variable 'c' can be reduced. [variableScope]
+ int i, in_paren = 0, c;
+                      ^
+scripts/kconfig/lxdialog/util.c:629:26: style:inconclusive: Function 'item_set_data' argument 1 names different: declaration 'p' definition 'ptr'. [funcArgNamesDifferent]
+void item_set_data(void *ptr)
+                         ^
+scripts/kconfig/lxdialog/dialog.h:152:26: note: Function 'item_set_data' argument 1 names different: declaration 'p' definition 'ptr'.
+void item_set_data(void *p);
+                         ^
+scripts/kconfig/lxdialog/util.c:629:26: note: Function 'item_set_data' argument 1 names different: declaration 'p' definition 'ptr'.
+void item_set_data(void *ptr)
+                         ^
+scripts/kconfig/mconf.c:652:6: style: The scope of the variable 'res' can be reduced. [variableScope]
+ int res;
+     ^
+scripts/kconfig/mconf.c:430:14: style: Variable 'stpart.text' is assigned a value that is never used. [unreadVariable]
+ stpart.text = str_get(&sttext);
+             ^
+scripts/kconfig/menu.c:499:8: style: Condition 'sym' is always true [knownConditionTrueFalse]
+   if (sym)
+       ^
+scripts/kconfig/menu.c:494:6: note: Assuming that condition '!sym' is not redundant
+ if (!sym || sym_get_tristate_value(menu->sym) == no)
+     ^
+scripts/kconfig/menu.c:499:8: note: Condition 'sym' is always true
+   if (sym)
+       ^
+scripts/kconfig/menu.c:611:2: warning: Either the condition 'sym' is redundant or there is possible null pointer dereference: sym. [nullPointerRedundantCheck]
+ for_all_properties(sym, prop, P_SYMBOL)
+ ^
+scripts/kconfig/menu.c:625:6: note: Assuming that condition 'sym' is not redundant
+ if (sym && sym->name) {
+     ^
+scripts/kconfig/menu.c:641:25: note: Calling function 'get_symbol_prop', 1st argument 'sym' value is 0
+ prop = get_symbol_prop(sym);
+                        ^
+scripts/kconfig/menu.c:611:2: note: Null pointer dereference
+ for_all_properties(sym, prop, P_SYMBOL)
+ ^
+scripts/kconfig/menu.c:638:2: warning: Either the condition 'sym' is redundant or there is possible null pointer dereference: sym. [nullPointerRedundantCheck]
+ for_all_prompts(sym, prop)
+ ^
+scripts/kconfig/menu.c:625:6: note: Assuming that condition 'sym' is not redundant
+ if (sym && sym->name) {
+     ^
+scripts/kconfig/menu.c:638:2: note: Null pointer dereference
+ for_all_prompts(sym, prop)
+ ^
+scripts/kconfig/menu.c:653:2: warning: Either the condition 'sym' is redundant or there is possible null pointer dereference: sym. [nullPointerRedundantCheck]
+ for_all_properties(sym, prop, P_SELECT) {
+ ^
+scripts/kconfig/menu.c:625:6: note: Assuming that condition 'sym' is not redundant
+ if (sym && sym->name) {
+     ^
+scripts/kconfig/menu.c:653:2: note: Null pointer dereference
+ for_all_properties(sym, prop, P_SELECT) {
+ ^
+scripts/kconfig/menu.c:663:6: warning: Either the condition 'sym' is redundant or there is possible null pointer dereference: sym. [nullPointerRedundantCheck]
+ if (sym->rev_dep.expr) {
+     ^
+scripts/kconfig/menu.c:625:6: note: Assuming that condition 'sym' is not redundant
+ if (sym && sym->name) {
+     ^
+scripts/kconfig/menu.c:663:6: note: Null pointer dereference
+ if (sym->rev_dep.expr) {
+     ^
+scripts/kconfig/menu.c:550:9: style: The scope of the variable 'j' can be reduced. [variableScope]
+ int i, j;
+        ^
+scripts/kconfig/menu.c:184:39: style:inconclusive: Function 'menu_add_visibility' argument 1 names different: declaration 'dep' definition 'expr'. [funcArgNamesDifferent]
+void menu_add_visibility(struct expr *expr)
+                                      ^
+scripts/kconfig/lkc.h:106:39: note: Function 'menu_add_visibility' argument 1 names different: declaration 'dep' definition 'expr'.
+void menu_add_visibility(struct expr *dep);
+                                      ^
+scripts/kconfig/menu.c:184:39: note: Function 'menu_add_visibility' argument 1 names different: declaration 'dep' definition 'expr'.
+void menu_add_visibility(struct expr *expr)
+                                      ^
+scripts/kconfig/nconf.c:1236:21: style: Variable 'child' is assigned a value that is never used. [unreadVariable]
+ struct menu *child = 0;
+                    ^
+scripts/kconfig/nconf.c:1240:13: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+ int res, i = 0;
+            ^
+scripts/kconfig/nconf.gui.c:170:4: style: Variable 'x' is reassigned a value before the old one has been used. [redundantAssignment]
+ x = startx + (int)temp;
+   ^
+scripts/kconfig/nconf.gui.c:162:5: note: x is assigned
+  x = startx;
+    ^
+scripts/kconfig/nconf.gui.c:170:4: note: x is overwritten
+ x = startx + (int)temp;
+   ^
+scripts/kconfig/nconf.gui.c:563:14: style: Redundant initialization for 'total_lines'. The initialized value is overwritten before it is read. [redundantInitialization]
+ total_lines = get_line_no(text);
+             ^
+scripts/kconfig/nconf.gui.c:548:18: note: total_lines is initialized
+ int total_lines = get_line_no(text);
+                 ^
+scripts/kconfig/nconf.gui.c:563:14: note: total_lines is overwritten
+ total_lines = get_line_no(text);
+             ^
+scripts/kconfig/nconf.gui.c:245:8: style: The scope of the variable 'btn' can be reduced. [variableScope]
+ char *btn;
+       ^
+scripts/kconfig/qconf.h:55:2: style: Class 'ConfigList' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+ ConfigList(ConfigView* p, const char *name = 0);
+ ^
+scripts/kconfig/qconf.h:208:2: style: Class 'ConfigLineEdit' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+ ConfigLineEdit(ConfigView* parent);
+ ^
+scripts/kconfig/qconf.h:224:2: style: Class 'ConfigView' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+ ConfigView(QWidget* parent, const char *name = 0);
+ ^
+scripts/kconfig/qconf.h:257:2: style: Class 'ConfigInfoView' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+ ConfigInfoView(QWidget* parent, const char *name = 0);
+ ^
+scripts/kconfig/qconf.h:287:2: style: Class 'ConfigSearchWindow' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+ ConfigSearchWindow(ConfigMainWindow* parent, const char *name = 0);
+ ^
+scripts/kconfig/qconf.h:59:10: style: C-style pointer casting [cstyleCast]
+  return (ConfigView*)Parent::parent();
+         ^
+scripts/kconfig/qconf.h:99:10: style: C-style pointer casting [cstyleCast]
+  return (ConfigItem *)Parent::firstChild();
+         ^
+scripts/kconfig/qconf.h:170:10: style: C-style pointer casting [cstyleCast]
+  return (ConfigList*)Parent::listView();
+         ^
+scripts/kconfig/qconf.h:174:10: style: C-style pointer casting [cstyleCast]
+  return (ConfigItem *)Parent::firstChild();
+         ^
+scripts/kconfig/qconf.h:178:10: style: C-style pointer casting [cstyleCast]
+  return (ConfigItem *)Parent::nextSibling();
+         ^
+scripts/kconfig/qconf.h:211:10: style: C-style pointer casting [cstyleCast]
+  return (ConfigView*)Parent::parent();
+         ^
+scripts/kconfig/qconf.cc:248:12: style: C-style pointer casting [cstyleCast]
+  for (i = (ConfigItem*)menu->data; i; i = i->nextItem)
+           ^
+scripts/kconfig/qconf.cc:274:14: style: C-style pointer casting [cstyleCast]
+  nextItem = (ConfigItem*)menu->data;
+             ^
+scripts/kconfig/qconf.cc:420:21: style: C-style pointer casting [cstyleCast]
+ ConfigItem* item = (ConfigItem*)menu->data;
+                    ^
+scripts/kconfig/qconf.cc:435:21: style: C-style pointer casting [cstyleCast]
+ ConfigItem* item = (ConfigItem*)selectedItem();
+                    ^
+scripts/kconfig/qconf.cc:459:11: style: C-style pointer casting [cstyleCast]
+   item = (ConfigItem*)it.current();
+          ^
+scripts/kconfig/qconf.cc:585:17: style: C-style pointer casting [cstyleCast]
+ for (; (item = (ConfigItem*)it.current()); it++) {
+                ^
+scripts/kconfig/qconf.cc:681:9: style: C-style pointer casting [cstyleCast]
+ item = (ConfigItem*)i;
+        ^
+scripts/kconfig/qconf.cc:728:21: style: C-style pointer casting [cstyleCast]
+ ConfigItem* item = (ConfigItem*)itemAt(p);
+                    ^
+scripts/kconfig/qconf.cc:790:21: style: C-style pointer casting [cstyleCast]
+ ConfigItem* item = (ConfigItem*)itemAt(p);
+                    ^
+scripts/kconfig/qconf.cc:820:21: style: C-style pointer casting [cstyleCast]
+ ConfigItem* item = (ConfigItem *)currentItem();
+                    ^
+scripts/kconfig/qconf.cc:1586:9: style: C-style pointer casting [cstyleCast]
+ item = (ConfigItem*)menuList->selectedItem();
+        ^
+scripts/kconfig/qconf.cc:1592:10: style: C-style pointer casting [cstyleCast]
+  item = (ConfigItem*)item->parent();
+         ^
+scripts/kconfig/qconf.cc:456:15: style: The scope of the variable 'item' can be reduced. [variableScope]
+  ConfigItem* item;
+              ^
+scripts/kconfig/qconf.cc:664:43: style:inconclusive: Function 'keyPressEvent' argument 1 names different: declaration 'e' definition 'ev'. [funcArgNamesDifferent]
+void ConfigList::keyPressEvent(QKeyEvent* ev)
+                                          ^
+scripts/kconfig/qconf.h:64:32: note: Function 'keyPressEvent' argument 1 names different: declaration 'e' definition 'ev'.
+ void keyPressEvent(QKeyEvent *e);
+                               ^
+scripts/kconfig/qconf.cc:664:43: note: Function 'keyPressEvent' argument 1 names different: declaration 'e' definition 'ev'.
+void ConfigList::keyPressEvent(QKeyEvent* ev)
+                                          ^
+scripts/kconfig/qconf.cc:989:43: style:inconclusive: Function 'setInfo' argument 1 names different: declaration 'menu' definition 'm'. [funcArgNamesDifferent]
+void ConfigInfoView::setInfo(struct menu *m)
+                                          ^
+scripts/kconfig/qconf.h:261:28: note: Function 'setInfo' argument 1 names different: declaration 'menu' definition 'm'.
+ void setInfo(struct menu *menu);
+                           ^
+scripts/kconfig/qconf.cc:989:43: note: Function 'setInfo' argument 1 names different: declaration 'menu' definition 'm'.
+void ConfigInfoView::setInfo(struct menu *m)
+                                          ^
+scripts/kconfig/qconf.cc:456:15: style: Local variable 'item' shadows outer argument [shadowArgument]
+  ConfigItem* item;
+              ^
+scripts/kconfig/qconf.cc:448:41: note: Shadowed declaration
+void ConfigList::updateList(ConfigItem* item)
+                                        ^
+scripts/kconfig/qconf.cc:456:15: note: Shadow variable
+  ConfigItem* item;
+              ^
+scripts/kconfig/symbol.c:905:4: error: Common realloc mistake: 'res' nulled but not freed upon failure [memleakOnRealloc]
+   res = realloc(res, reslen);
+   ^
+scripts/kconfig/symbol.c:1214:14: style: Variable 'stack.expr' is reassigned a value before the old one has been used. [redundantAssignment]
+  stack.expr = NULL;
+             ^
+scripts/kconfig/symbol.c:1210:14: note: stack.expr is assigned
+  stack.expr = prop->expr;
+             ^
+scripts/kconfig/symbol.c:1214:14: note: stack.expr is overwritten
+  stack.expr = NULL;
+             ^
+scripts/kconfig/symbol.c:697:17: style: The scope of the variable 'ds' can be reduced. [variableScope]
+ struct symbol *ds;
+                ^
+scripts/kconfig/symbol.c:1085:23: style: The scope of the variable 'next_sym' can be reduced. [variableScope]
+ struct symbol *sym, *next_sym;
+                      ^
+scripts/kconfig/symbol.c:1263:19: style: The scope of the variable 'prop' can be reduced. [variableScope]
+ struct property *prop;
+                  ^
+scripts/kconfig/symbol.c:1297:20: style: The scope of the variable 'propp' can be reduced. [variableScope]
+ struct property **propp;
+                   ^
+scripts/kconfig/symbol.c:475:61: style:inconclusive: Function 'sym_tristate_within_range' argument 2 names different: declaration 'tri' definition 'val'. [funcArgNamesDifferent]
+bool sym_tristate_within_range(struct symbol *sym, tristate val)
+                                                            ^
+scripts/kconfig/lkc_proto.h:39:60: note: Function 'sym_tristate_within_range' argument 2 names different: declaration 'tri' definition 'val'.
+bool sym_tristate_within_range(struct symbol *sym,tristate tri);
+                                                           ^
+scripts/kconfig/symbol.c:475:61: note: Function 'sym_tristate_within_range' argument 2 names different: declaration 'tri' definition 'val'.
+bool sym_tristate_within_range(struct symbol *sym, tristate val)
+                                                            ^
+scripts/kconfig/symbol.c:494:58: style:inconclusive: Function 'sym_set_tristate_value' argument 2 names different: declaration 'tri' definition 'val'. [funcArgNamesDifferent]
+bool sym_set_tristate_value(struct symbol *sym, tristate val)
+                                                         ^
+scripts/kconfig/lkc_proto.h:40:57: note: Function 'sym_set_tristate_value' argument 2 names different: declaration 'tri' definition 'val'.
+bool sym_set_tristate_value(struct symbol *sym,tristate tri);
+                                                        ^
+scripts/kconfig/symbol.c:494:58: note: Function 'sym_set_tristate_value' argument 2 names different: declaration 'tri' definition 'val'.
+bool sym_set_tristate_value(struct symbol *sym, tristate val)
+                                                         ^
+scripts/kconfig/symbol.c:553:55: style:inconclusive: Function 'sym_string_valid' argument 2 names different: declaration 'newval' definition 'str'. [funcArgNamesDifferent]
+bool sym_string_valid(struct symbol *sym, const char *str)
+                                                      ^
+scripts/kconfig/lkc_proto.h:42:55: note: Function 'sym_string_valid' argument 2 names different: declaration 'newval' definition 'str'.
+bool sym_string_valid(struct symbol *sym, const char *newval);
+                                                      ^
+scripts/kconfig/symbol.c:553:55: note: Function 'sym_string_valid' argument 2 names different: declaration 'newval' definition 'str'.
+bool sym_string_valid(struct symbol *sym, const char *str)
+                                                      ^
+scripts/kconfig/symbol.c:390:18: style: Local variable 'e' shadows outer variable [shadowVariable]
+    struct expr *e;
+                 ^
+scripts/kconfig/symbol.c:318:15: note: Shadowed declaration
+ struct expr *e;
+              ^
+scripts/kconfig/symbol.c:390:18: note: Shadow variable
+    struct expr *e;
+                 ^
+scripts/kconfig/util.c:37:23: style: The scope of the variable 'env_sym' can be reduced. [variableScope]
+ struct symbol *sym, *env_sym;
+                      ^
+scripts/kconfig/util.c:103:9: style: The scope of the variable 'l' can be reduced. [variableScope]
+ size_t l;
+        ^
+suricatta/server_general.c:362:8: style: Condition 'qry' is always false [knownConditionTrueFalse]
+   if (qry)
+       ^
+suricatta/server_general.c:348:14: note: Assignment 'qry=NULL', assigned value is 0
+ char *qry = NULL;
+             ^
+suricatta/server_general.c:352:6: note: Assuming condition is false
+ if (!curl)
+     ^
+suricatta/server_general.c:362:8: note: Condition 'qry' is always false
+   if (qry)
+       ^
+suricatta/server_general.c:249:7: warning:inconclusive: Either the condition '!prog' is redundant or there is possible null pointer dereference: prog. [nullPointerRedundantCheck]
+ if (!prog->url || !strlen(prog->url)) {
+      ^
+suricatta/server_general.c:246:6: note: Assuming that condition '!prog' is not redundant
+ if (!prog) {
+     ^
+suricatta/server_general.c:237:31: note: Assignment to 'prog=(struct server_progress_data*)data'
+ server_progress_data *prog = (server_progress_data *)data;
+                              ^
+suricatta/server_general.c:249:7: note: Null pointer dereference
+ if (!prog->url || !strlen(prog->url)) {
+      ^
+suricatta/server_general.c:128:8: style: The scope of the variable 'elem' can be reduced. [variableScope]
+ void *elem;
+       ^
+suricatta/server_hawkbit.c:407:16: error: syntax error [syntaxError]
+   "details" : [ %s ]
+               ^
+suricatta/server_lua.c:1264:3: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+  channel = NULL;
+  ^
+suricatta/server_lua.c:1276:3: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+  channel_data = NULL;
+  ^
+suricatta/server_lua.c:1738:43: error: Subtracting pointers that point to different objects [comparePointers]
+        EMBEDDED_SURICATTA_LUA_SOURCE_END -
+                                          ^
+suricatta/server_lua.c:43:19: note: Variable declared here.
+extern const char EMBEDDED_SURICATTA_LUA_SOURCE_END[];
+                  ^
+suricatta/server_lua.c:1738:9: note: Array decayed to pointer here.
+        EMBEDDED_SURICATTA_LUA_SOURCE_END -
+        ^
+suricatta/server_lua.c:42:19: note: Variable declared here.
+extern const char EMBEDDED_SURICATTA_LUA_SOURCE_START[];
+                  ^
+suricatta/server_lua.c:1739:6: note: Array decayed to pointer here.
+     EMBEDDED_SURICATTA_LUA_SOURCE_START,
+     ^
+suricatta/server_lua.c:1738:43: note: Subtracting pointers that point to different objects
+        EMBEDDED_SURICATTA_LUA_SOURCE_END -
+                                          ^
+suricatta/suricatta.c:225:6: style: The scope of the variable 'retval' can be reduced. [variableScope]
+ int retval;
+     ^
+test/test_crypt.c:145:6: style: Redundant initialization for 'ret'. The initialized value is overwritten before it is read. [redundantInitialization]
+ ret = swupdate_DECRYPT_final(dcrypt, buffer, &len);
+     ^
+test/test_crypt.c:144:10: note: ret is initialized
+ int ret = swupdate_DECRYPT_update(dcrypt, buffer, &len, crypt.crypttext, strlen((const char *)CRYPTTEXT) / 2);
+         ^
+test/test_crypt.c:145:6: note: ret is overwritten
+ ret = swupdate_DECRYPT_final(dcrypt, buffer, &len);
+     ^
+test/test_crypt.c:38:15: style: The scope of the variable 'val' can be reduced. [variableScope]
+ unsigned int val;
+              ^
+test/test_hash.c:62:15: style: The scope of the variable 'val' can be reduced. [variableScope]
+ unsigned int val;
+              ^
+tools/swupdate-ipc.c:255:12: style: Checking if unsigned expression 'size' is less than zero. [unsignedLessThanZero]
+  if (size <= 0)
+           ^
+tools/swupdate-ipc.c:191:51: error: Uninitialized variable: polling_time [uninitvar]
+  snprintf(buf, size, "{ \"polling\" : \"%lu\"}", polling_time);
+                                                  ^
+tools/swupdate-ipc.c:260:11: style: Variable 'written' is assigned a value that is never used. [unreadVariable]
+  written = snprintf(buf, size, "]}");
+          ^
+tools/swupdate-ipc.c:262:11: style: Variable 'written' is assigned a value that is never used. [unreadVariable]
+  written = snprintf(buf, size, "}");
+          ^
+tools/swupdate-ipc.c:399:7: style: The scope of the variable 'local' can be reduced. [variableScope]
+ char local[NI_MAXHOST];
+      ^
+tools/swupdate-ipc.c:555:10: style: The scope of the variable 'end' can be reduced. [variableScope]
+   char *end;
+         ^
+tools/swupdate-ipc.c:278:22: style: The scope of the variable 'parsed_json' can be reduced. [variableScope]
+ struct json_object *parsed_json;
+                     ^
+tools/swupdate-progress.c:95:6: style: The scope of the variable 'pid_psplash' can be reduced. [variableScope]
+ int pid_psplash;
+     ^
+tools/swupdate-progress.c:400:17: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+    char *buf = alloca(PSPLASH_MSG_SIZE);
+                ^
+handlers/remote_handler.c:51:32: error: Null pointer dereference: body [ctunullpointer]
+    memcpy (zmq_msg_data(msg), body, size);
+                               ^
+handlers/remote_handler.c:189:15: note: Calling function RHset_payload, 2nd argument is null
+ RHset_payload(&RHmessage, NULL, 0);
+              ^
+handlers/remote_handler.c:51:32: note: Dereferencing argument body that is null
+    memcpy (zmq_msg_data(msg), body, size);
+                               ^
+scripts/kconfig/menu.c:611:2: warning: Null pointer dereference: sym [ctunullpointer]
+ for_all_properties(sym, prop, P_SYMBOL)
+ ^
+scripts/kconfig/menu.c:625:6: note: Assuming that condition 'sym' is not redundant
+
+     ^
+scripts/kconfig/menu.c:641:24: note: Calling function get_symbol_prop, 1st argument is null
+ prop = get_symbol_prop(sym);
+                       ^
+scripts/kconfig/menu.c:611:2: note: Dereferencing argument sym that is null
+ for_all_properties(sym, prop, P_SYMBOL)
+ ^
+test/test_server_hawkbit.c:66:0: style: The function '__wrap_channel_close' is never used. [unusedFunction]
+
+^
+test/test_server_hawkbit.c:57:0: style: The function '__wrap_channel_open' is never used. [unusedFunction]
+
+^
+test/test_server_hawkbit.c:50:0: style: The function '__wrap_ipc_postupdate' is never used. [unusedFunction]
+
+^
+test/test_json.c:52:0: style: The function '__wrap_json_get_key' is never used. [unusedFunction]
+
+^
+test/test_json.c:61:0: style: The function '__wrap_json_get_path_key' is never used. [unusedFunction]
+
+^
+test/test_json.c:73:0: style: The function '__wrap_json_object_object_get_ex' is never used. [unusedFunction]
+
+^
+scripts/kconfig/menu.c:42:0: style: The function '_menu_init' is never used. [unusedFunction]
+
+^
+handlers/archive_handler.c:391:0: style: The function 'archive_handler' is never used. [unusedFunction]
+
+^
+bindings/auxiliar.c:74:0: style: The function 'auxiliar_add2group' is never used. [unusedFunction]
+
+^
+bindings/auxiliar.c:85:0: style: The function 'auxiliar_checkboolean' is never used. [unusedFunction]
+
+^
+bindings/auxiliar.c:109:0: style: The function 'auxiliar_checkgroup' is never used. [unusedFunction]
+
+^
+bindings/auxiliar.c:21:0: style: The function 'auxiliar_open' is never used. [unusedFunction]
+
+^
+handlers/boot_handler.c:151:0: style: The function 'boot_handler' is never used. [unusedFunction]
+
+^
+handlers/btrfs_handler.c:102:0: style: The function 'btrfs_handler' is never used. [unusedFunction]
+
+^
+scripts/kconfig/qconf.cc:1642:0: style: The function 'closeEvent' is never used. [unusedFunction]
+
+^
+scripts/kconfig/qconf.cc:828:0: style: The function 'contextMenuEvent' is never used. [unusedFunction]
+
+^
+handlers/copy_handler.c:302:0: style: The function 'copy_handler' is never used. [unusedFunction]
+
+^
+core/cpio_utils.c:825:0: style: The function 'cpio_scan' is never used. [unusedFunction]
+
+^
+handlers/delta_handler.c:1111:0: style: The function 'delta_handler' is never used. [unusedFunction]
+
+^
+handlers/diskformat_handler.c:66:0: style: The function 'diskformat_handler' is never used. [unusedFunction]
+
+^
+handlers/diskpart_handler.c:1744:0: style: The function 'diskpart_gpt_swap_partition' is never used. [unusedFunction]
+
+^
+handlers/diskpart_handler.c:1730:0: style: The function 'diskpart_handler' is never used. [unusedFunction]
+
+^
+handlers/diskpart_handler.c:1751:0: style: The function 'diskpart_install_gpt_partition_image' is never used. [unusedFunction]
+
+^
+handlers/diskpart_handler.c:1737:0: style: The function 'diskpart_toggle_boot' is never used. [unusedFunction]
+
+^
+corelib/downloader.c:93:0: style: The function 'download_print_help' is never used. [unusedFunction]
+
+^
+handlers/dummy_handler.c:44:0: style: The function 'dummy_handler' is never used. [unusedFunction]
+
+^
+bootloader/ebg.c:558:0: style: The function 'ebg_probe' is never used. [unusedFunction]
+
+^
+core/cpio_utils.c:759:0: style: The function 'extract_img_from_cpio' is never used. [unusedFunction]
+
+^
+core/cpio_utils.c:779:0: style: The function 'extract_next_file' is never used. [unusedFunction]
+
+^
+fs/ff.c:4210:0: style: The function 'f_close' is never used. [unusedFunction]
+
+^
+fs/ff.c:3664:0: style: The function 'f_mount' is never used. [unusedFunction]
+
+^
+fs/ff.c:3712:0: style: The function 'f_open' is never used. [unusedFunction]
+
+^
+fs/ff.c:3906:0: style: The function 'f_read' is never used. [unusedFunction]
+
+^
+fs/ff.c:4007:0: style: The function 'f_write' is never used. [unusedFunction]
+
+^
+scripts/kconfig/util.c:14:0: style: The function 'file_lookup' is never used. [unusedFunction]
+
+^
+handlers/flash_hamming1_handler.c:311:0: style: The function 'flash_1bit_hamming_handler' is never used. [unusedFunction]
+
+^
+handlers/flash_handler.c:376:0: style: The function 'flash_handler' is never used. [unusedFunction]
+
+^
+core/util.c:208:0: style: The function 'freeargs' is never used. [unusedFunction]
+
+^
+core/parsing_library.c:114:0: style: The function 'get_field_string_with_size' is never used. [unusedFunction]
+
+^
+core/parsing_library.c:173:0: style: The function 'get_node' is never used. [unusedFunction]
+
+^
+core/artifacts_versions.c:141:0: style: The function 'get_sw_versions' is never used. [unusedFunction]
+
+^
+bootloader/grub.c:362:0: style: The function 'grub_probe' is never used. [unusedFunction]
+
+^
+core/install_from_file.c:74:0: style: The function 'install_from_file' is never used. [unusedFunction]
+
+^
+ipc/network_ipc.c:127:0: style: The function 'ipc_get_status' is never used. [unusedFunction]
+
+^
+ipc/network_ipc.c:147:0: style: The function 'ipc_get_status_timeout' is never used. [unusedFunction]
+
+^
+ipc/network_ipc.c:302:0: style: The function 'ipc_inst_start' is never used. [unusedFunction]
+
+^
+corelib/parsing_library_libjson.c:174:0: style: The function 'json_get_data_url' is never used. [unusedFunction]
+
+^
+core/util.c:460:0: style: The function 'load_decryption_key' is never used. [unusedFunction]
+
+^
+handlers/lua_scripthandler.c:65:0: style: The function 'lua_handler' is never used. [unusedFunction]
+
+^
+corelib/lua_interface.c:1515:0: style: The function 'lua_handlers_init' is never used. [unusedFunction]
+
+^
+bindings/lua_swupdate.c:362:0: style: The function 'luaopen_lua_swupdate' is never used. [unusedFunction]
+
+^
+scripts/kconfig/menu.c:108:0: style: The function 'menu_add_dep' is never used. [unusedFunction]
+
+^
+scripts/kconfig/menu.c:48:0: style: The function 'menu_add_entry' is never used. [unusedFunction]
+
+^
+scripts/kconfig/menu.c:190:0: style: The function 'menu_add_expr' is never used. [unusedFunction]
+
+^
+scripts/kconfig/menu.c:70:0: style: The function 'menu_add_menu' is never used. [unusedFunction]
+
+^
+scripts/kconfig/menu.c:200:0: style: The function 'menu_add_option' is never used. [unusedFunction]
+
+^
+scripts/kconfig/menu.c:179:0: style: The function 'menu_add_prompt' is never used. [unusedFunction]
+
+^
+scripts/kconfig/menu.c:184:0: style: The function 'menu_add_visibility' is never used. [unusedFunction]
+
+^
+scripts/kconfig/menu.c:77:0: style: The function 'menu_end_menu' is never used. [unusedFunction]
+
+^
+mongoose/mongoose_interface.c:783:0: style: The function 'mongoose_print_help' is never used. [unusedFunction]
+
+^
+corelib/mtd-interface.c:165:0: style: The function 'mtd_set_ubiblacklist' is never used. [unusedFunction]
+
+^
+core/stream_interface.c:514:0: style: The function 'network_initializer' is never used. [unusedFunction]
+
+^
+bootloader/none.c:55:0: style: The function 'none_probe' is never used. [unusedFunction]
+
+^
+core/notifier.c:165:0: style: The function 'notifier_set_color' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:670:0: style: The function 'on_about1_activate' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:707:0: style: The function 'on_back_clicked' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:764:0: style: The function 'on_collapse_clicked' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:770:0: style: The function 'on_expand_clicked' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:753:0: style: The function 'on_full_clicked' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:639:0: style: The function 'on_introduction1_activate' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:688:0: style: The function 'on_license1_activate' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:722:0: style: The function 'on_load_clicked' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:565:0: style: The function 'on_quit1_activate' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:545:0: style: The function 'on_save_as1_activate' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:613:0: style: The function 'on_set_option_mode1_activate' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:622:0: style: The function 'on_set_option_mode2_activate' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:631:0: style: The function 'on_set_option_mode3_activate' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:601:0: style: The function 'on_show_data1_activate' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:572:0: style: The function 'on_show_name1_activate' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:583:0: style: The function 'on_show_range1_activate' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:728:0: style: The function 'on_single_clicked' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:737:0: style: The function 'on_split_clicked' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:998:0: style: The function 'on_treeview1_button_press_event' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:880:0: style: The function 'on_treeview2_button_press_event' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:982:0: style: The function 'on_treeview2_cursor_changed' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:937:0: style: The function 'on_treeview2_key_press_event' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:461:0: style: The function 'on_window1_destroy' is never used. [unusedFunction]
+
+^
+scripts/kconfig/gconf.c:468:0: style: The function 'on_window1_size_request' is never used. [unusedFunction]
+
+^
+core/bootloader.c:70:0: style: The function 'print_registered_bootloaders' is never used. [unusedFunction]
+
+^
+core/handler.c:52:0: style: The function 'print_registered_handlers' is never used. [unusedFunction]
+
+^
+core/progress_thread.c:269:0: style: The function 'progress_bar_thread' is never used. [unusedFunction]
+
+^
+handlers/copy_handler.c:309:0: style: The function 'raw_copyimage_handler' is never used. [unusedFunction]
+
+^
+handlers/raw_handler.c:261:0: style: The function 'raw_file_handler' is never used. [unusedFunction]
+
+^
+handlers/raw_handler.c:254:0: style: The function 'raw_image_handler' is never used. [unusedFunction]
+
+^
+handlers/rdiff_handler.c:445:0: style: The function 'rdiff_file_handler' is never used. [unusedFunction]
+
+^
+handlers/rdiff_handler.c:439:0: style: The function 'rdiff_image_handler' is never used. [unusedFunction]
+
+^
+corelib/swupdate_settings.c:104:0: style: The function 'read_settings_user_id' is never used. [unusedFunction]
+
+^
+handlers/readback_handler.c:129:0: style: The function 'readback_handler' is never used. [unusedFunction]
+
+^
+suricatta/server_general.c:738:0: style: The function 'register_server_general' is never used. [unusedFunction]
+
+^
+suricatta/server_lua.c:2033:0: style: The function 'register_server_lua' is never used. [unusedFunction]
+
+^
+handlers/remote_handler.c:204:0: style: The function 'remote_handler' is never used. [unusedFunction]
+
+^
+core/util.c:56:0: style: The function 'sdup' is never used. [unusedFunction]
+
+^
+core/semver.c:536:0: style: The function 'semver_bump' is never used. [unusedFunction]
+
+^
+core/semver.c:541:0: style: The function 'semver_bump_minor' is never used. [unusedFunction]
+
+^
+core/semver.c:546:0: style: The function 'semver_bump_patch' is never used. [unusedFunction]
+
+^
+core/semver.c:584:0: style: The function 'semver_clean' is never used. [unusedFunction]
+
+^
+core/semver.c:339:0: style: The function 'semver_neq' is never used. [unusedFunction]
+
+^
+core/semver.c:624:0: style: The function 'semver_numeric' is never used. [unusedFunction]
+
+^
+core/semver.c:444:0: style: The function 'semver_satisfies' is never used. [unusedFunction]
+
+^
+core/util.c:560:0: style: The function 'set_aes_ivt' is never used. [unusedFunction]
+
+^
+core/bootloader.c:39:0: style: The function 'set_bootloader' is never used. [unusedFunction]
+
+^
+handlers/shell_scripthandler.c:112:0: style: The function 'shell_handler' is never used. [unusedFunction]
+
+^
+handlers/shell_scripthandler.c:126:0: style: The function 'shell_postinstall_handler' is never used. [unusedFunction]
+
+^
+handlers/shell_scripthandler.c:119:0: style: The function 'shell_preinstall_handler' is never used. [unusedFunction]
+
+^
+core/pctl.c:463:0: style: The function 'sigchld_handler' is never used. [unusedFunction]
+
+^
+core/util.c:190:0: style: The function 'splitargs' is never used. [unusedFunction]
+
+^
+handlers/ssbl_handler.c:285:0: style: The function 'ssbl_handler' is never used. [unusedFunction]
+
+^
+handlers/delta_downloader.c:138:0: style: The function 'start_delta_downloader' is never used. [unusedFunction]
+
+^
+corelib/downloader.c:120:0: style: The function 'start_download' is never used. [unusedFunction]
+
+^
+mongoose/mongoose_interface.c:802:0: style: The function 'start_mongoose' is never used. [unusedFunction]
+
+^
+core/pctl.c:238:0: style: The function 'start_subprocess' is never used. [unusedFunction]
+
+^
+core/pctl.c:229:0: style: The function 'start_subprocess_from_file' is never used. [unusedFunction]
+
+^
+suricatta/suricatta.c:245:0: style: The function 'start_suricatta' is never used. [unusedFunction]
+
+^
+handlers/swuforward_handler.c:423:0: style: The function 'swuforward_handler' is never used. [unusedFunction]
+
+^
+scripts/kconfig/symbol.c:46:0: style: The function 'sym_init' is never used. [unusedFunction]
+
+^
+core/syslog.c:13:0: style: The function 'syslog_init' is never used. [unusedFunction]
+
+^
+handlers/ubivol_handler.c:559:0: style: The function 'ubi_handler' is never used. [unusedFunction]
+
+^
+corelib/mtd-interface.c:504:0: style: The function 'ubi_mount' is never used. [unusedFunction]
+
+^
+corelib/mtd-interface.c:521:0: style: The function 'ubi_umount' is never used. [unusedFunction]
+
+^
+handlers/boot_handler.c:145:0: style: The function 'uboot_handler' is never used. [unusedFunction]
+
+^
+bootloader/uboot.c:157:0: style: The function 'uboot_probe' is never used. [unusedFunction]
+
+^
+handlers/ucfw_handler.c:575:0: style: The function 'ucfw_handler' is never used. [unusedFunction]
+
+^
+handlers/uniqueuuid_handler.c:69:0: style: The function 'uniqueuuid_handler' is never used. [unusedFunction]
+
+^
+handlers/archive_handler.c:399:0: style: The function 'untar_handler' is never used. [unusedFunction]
+
+^
+handlers/zchunk_range.c:185:0: style: The function 'zchunk_get_range_count' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
